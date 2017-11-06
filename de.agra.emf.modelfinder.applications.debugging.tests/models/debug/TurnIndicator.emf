@@ -1,0 +1,30 @@
+@namespace(uri="TurnIndicator", prefix="TurnIndicator")
+package TurnIndicator;
+
+class Flash_Ctrl {
+    attr int tilOld;
+    attr int tilLevel;
+    attr Boolean emerSwitch;
+    
+    op void setTil(Integer l);
+    op void switchEmerMode();
+    op void manageFlashing();
+    op void manageEmerMode();
+
+    ref Output_Ctrl[1]#HasOutput_flash HasOutput_output;
+}
+
+class Output_Ctrl {
+    attr int ctr;
+    attr Boolean lOld;
+    attr Boolean rOld;
+    attr Boolean left;
+    attr Boolean right;
+    attr Boolean lampsLeft;
+    attr Boolean lampsRight;
+
+    op void FlashOn();
+    op void FlashOff();
+    
+    ref Flash_Ctrl[1]#HasOutput_output HasOutput_flash;
+}

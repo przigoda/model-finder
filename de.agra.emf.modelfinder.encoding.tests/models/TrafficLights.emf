@@ -1,0 +1,16 @@
+@namespace(uri="TrafficLights", prefix="TrafficLights")
+package TrafficLights;
+
+class Button {
+  op void requesting();
+  !ordered unsettable attr int[1] counter = 1;
+}
+
+class TrafficLight {
+  op void switchPedLight();
+  op void switchCarLight();
+  !ordered unsettable attr boolean[1] pedLight;
+  !ordered unsettable attr boolean[1] carLight;
+  !ordered unsettable attr boolean[1] request;
+}
+

@@ -1,0 +1,7 @@
+import Simple : 'Simple.ecore#/'
+
+package Simple
+
+context A inv foo: self.x = 42
+
+endpackage

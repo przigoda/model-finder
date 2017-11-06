@@ -1,0 +1,11 @@
+import Basic3 : 'Basic3.ecore#/'
+
+package Basic3
+
+context C
+  inv i0: a and (a implies b)
+  inv i1: b and (b implies c)
+  inv i2: c and (c implies a)
+  inv i3: a and b and c
+
+endpackage

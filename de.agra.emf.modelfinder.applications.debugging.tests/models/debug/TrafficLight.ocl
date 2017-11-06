@@ -1,0 +1,35 @@
+import TrafficLight : 'TrafficLight.ecore#/'
+
+package TrafficLight
+
+context Button
+  inv validCounter: (not counter.oclIsUndefined()) and counter < 1000
+  
+  
+context TrafficLight
+  inv validValues: (not pedLight.oclIsUndefined()) and (not carLight.oclIsUndefined()) and (not request.oclIsUndefined())
+  inv oneAlwaysRed: not(pedLight = true and carLight = true)
+
+context Button::requesting():
+  --pre: light.request = false
+  pre: HasButton_light.pedLight = false
+  post: HasButton_light.request = true
+  post: HasButton_light.carLight = HasButton_light.carLight@pre
+  post: HasButton_light.pedLight = HasButton_light.pedLight@pre
+  post: counter = counter@pre + 1
+
+context TrafficLight::switchPedLight():
+  pre: request = true
+--  pre: not( pedLight = false and request = true and carLight = true )
+--  pre: pedLight = true or carLight = false
+  post: pedLight <> pedLight@pre
+  post: request = false
+  post: carLight = carLight@pre
+
+context TrafficLight::switchCarLight():
+--  pre: not( pedLight = true and request = false and carLight = false )
+  post: carLight <> carLight@pre
+  post: pedLight = pedLight@pre
+  post: request = request@pre
+
+endpackage

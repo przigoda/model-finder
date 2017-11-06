@@ -1,0 +1,26 @@
+@namespace(uri="AccessControl", prefix="AccessControl")
+package AccessControl;
+
+class Person {
+  op void pass(Building b);
+  ref Building[+]#authorization_accessor authorization_building;
+  ref Building[1]#situation_person situation_place;
+}
+
+class Building {
+  ref Person[*]#authorization_building authorization_accessor;
+  ref Person[*]#situation_place situation_person;
+}
+
+class RPerson {
+    op void pass(RBuilding b);
+    ref RBuilding[1..*]#rauthorization_raccessor rauthorization_rbuilding;
+    ref RBuilding[1]#rsituation_rperson rsituation_rplace;
+}
+
+class RBuilding {
+    ref RPerson[*]#rauthorization_rbuilding rauthorization_raccessor;
+    ref RPerson[*]#rsituation_rplace rsituation_rperson;
+    ref RBuilding[1]#communication_entry communication_exit;
+    ref RBuilding[*]#communication_exit communication_entry;
+}

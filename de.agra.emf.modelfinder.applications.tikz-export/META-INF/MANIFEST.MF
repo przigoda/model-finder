@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modelfinder TikZ-Export
+Bundle-SymbolicName: de.agra.emf.modelfinder.applications.tikz-export
+Bundle-Version: 0.0.1
+Bundle-Vendor: AGRA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.agra.emf.modelfinder.applications.tikzexport
+Require-Bundle: org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ de.agra.emf.modelfinder.statesequence;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.encoding;bundle-version="0.0.1",
+ org.eclipse.emf.ecore;bundle-version="2.9.1"
+

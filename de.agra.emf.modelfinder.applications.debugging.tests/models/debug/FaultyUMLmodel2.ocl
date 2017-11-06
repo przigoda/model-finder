@@ -1,0 +1,10 @@
+import FaultyUMLmodel2 : 'FaultyUMLmodel2.ecore#/'
+
+package FaultyUMLmodel2
+
+context A
+    inv i1: self.x = 10 and self.y = 12
+    inv i2: self.x = 11 and self.y = 12
+    inv i3: self.x = 12 and self.y = 12
+
+endpackage

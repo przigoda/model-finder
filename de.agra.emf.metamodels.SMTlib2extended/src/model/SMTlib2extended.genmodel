@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/de.agra.emf.metamodels.SMTlib2extended/src"
+    modelPluginID="de.agra.emf.metamodels.SMTlib2extended" modelName="SMTlib2extended" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>SMTlib2extended.ecore</foreignModel>
+  <genPackages prefix="SMTlib2extended" basePackage="de.agra.emf.metamodels" disposableProviderFactory="true"
+      ecorePackage="SMTlib2extended.ecore#/">
+    <genClasses ecoreClass="SMTlib2extended.ecore#//Instance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//Instance/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//Instance/assertions"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//Variable"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//Predicate"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//Bitvector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//Bitvector/width"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//Expression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//VariableExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//VariableExpression/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ConstBooleanExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//ConstBooleanExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ConstIntegerExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//ConstIntegerExpression/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//ConstIntegerExpression/width"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BitstringExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//BitstringExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//NAryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//NAryExpression/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//AndExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//OrExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ConcatExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BinaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//BinaryExpression/lhs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//BinaryExpression/rhs"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//AddExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//DivExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//SubExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//MulExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ModExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//EqualsExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//GreaterExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//GreaterEqualsExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ImpliesExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//LessExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//LessEqualsExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//NandExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//UnaryExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//UnaryExpression/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//NotExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//OneHotExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//ExtractIndexExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//ExtractIndexExpression/index"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BvNotExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BvOrExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BvAndExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//BvXorExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//IteExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//IteExpression/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//IteExpression/thenexpr"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//IteExpression/elseexpr"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SMTlib2extended.ecore#//CardExpression/k"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SMTlib2extended.ecore#//CardExpression/variables"/>
+    </genClasses>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardEqExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardGeExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardGtExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardLeExpression"/>
+    <genClasses ecoreClass="SMTlib2extended.ecore#//CardLtExpression"/>
+  </genPackages>
+</genmodel:GenModel>

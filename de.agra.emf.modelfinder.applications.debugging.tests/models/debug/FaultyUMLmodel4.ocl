@@ -1,0 +1,17 @@
+import FaultyUMLmodel4 : 'FaultyUMLmodel4.ecore#/'
+
+package FaultyUMLmodel4
+
+context A inv i1: self.v <= 10 implies self.w
+
+context B inv i2: BA->one( a | a.w = false )
+
+context C inv i3: A.allInstances()->forAll( a | a.v = 8 )
+context C inv i4: C.allInstances()->forAll( c | c.u = 3 )
+context C inv i5: B.allInstances()->forAll( b | b.x = 11 and b.x = 12 )
+
+context D inv i6: DC->forAll(c| c.u < 10)
+-- sum() is not support :(
+--context D inv i7: DC->forAll(c| c.CD->size() = self.DC.u->sum() )
+
+endpackage

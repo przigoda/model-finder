@@ -1,0 +1,37 @@
+@namespace(uri="Traffic", prefix="Traffic")
+package Traffic;
+
+enum Direction {
+    NorthSouth;
+    WestEast;
+}
+
+class TrafficLight {
+    attr Direction direction;
+
+    ref PedestrianLight[1]#HasPedLight_trafficLight HasPedLight_pedestrianLight;
+    ref CarLight[1]#HasCarLight_trafficLight HasCarLight_carLight;
+}
+
+class PedestrianLight {
+    attr Boolean redLight;
+    attr Boolean greenLight;
+
+    op void switch();
+
+    ref TrafficLight[1]#HasPedLight_pedestrianLight HasPedLight_trafficLight;
+}
+
+class CarLight {
+    attr Boolean redLight;
+    attr Boolean yellowLight;
+    attr Boolean greenLight;
+
+    op void switchRedToRedYellow();
+    op void switchRedYellowToGreen();
+    op void switchGreenToYellow();
+    op void switchYellowToRed();
+
+
+    ref TrafficLight[1]#HasCarLight_carLight HasCarLight_trafficLight;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Demo" nsURI="Demo" nsPrefix="Demo">
+  <eClassifiers xsi:type="ecore:EClass" name="Employee">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorksIn_department" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Department" eOpposite="#//Department/WorksIn_employee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorksOn_project" ordered="false"
+        upperBound="-1" eType="#//Project" eOpposite="#//Project/WorksOn_employee"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Department">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="budget" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorksIn_employee" ordered="false"
+        upperBound="-1" eType="#//Employee" eOpposite="#//Employee/WorksIn_department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Controls_project" ordered="false"
+        upperBound="-1" eType="#//Project" eOpposite="#//Project/Controls_department"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Project">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="budget" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WorksOn_employee" ordered="false"
+        upperBound="-1" eType="#//Employee" eOpposite="#//Employee/WorksOn_project"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Controls_department" ordered="false"
+        lowerBound="1" eType="#//Department" eOpposite="#//Department/Controls_project"/>
+  </eClassifiers>
+</ecore:EPackage>

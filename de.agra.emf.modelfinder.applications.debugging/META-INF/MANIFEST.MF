@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ModelFinder Application Debugging
+Bundle-SymbolicName: de.agra.emf.modelfinder.applications.debugging
+Bundle-Version: 0.0.1
+Bundle-Vendor: AGRA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: de.agra.emf.modelfinder.encoding;bundle-version="0.0.1";visibility:=reexport,
+ org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore,
+ de.agra.emf.metamodels.SMTlib2extended;bundle-version="1.0.0",
+ de.agra.emf.modelfinder.modelloader;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.statesequence;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.utils;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.encoding.tests;bundle-version="0.0.1"
+Export-Package: de.agra.emf.modelfinder.applications.debugging

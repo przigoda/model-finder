@@ -1,0 +1,146 @@
+import Train : 'Train.ecore#/'
+
+package Train
+
+context Waggon::predecessorAsSet(): Set(Waggon)
+  post: if WaggonOrder_Waggon_role_predecessor.oclIsUndefined()
+        then Set{}
+        else Set{WaggonOrder_Waggon_role_predecessor}
+        endif
+context Waggon::privateTransPredecessor(s: Set(Waggon)): Set(Waggon)
+  post: result = if s->union(
+                     s->collect( w:Waggon | w.predecessorAsSet() )->flatten()
+                 )->asSet() = s
+                 then s
+                 else privateTransPredecessor(
+                         s->union(
+                             s->collect( w:Waggon | w.predecessorAsSet() )->flatten()
+                         )->asSet()
+                      )
+                 endif
+
+context Waggon::transPredecessor() : Set(Waggon)
+  post: result = self.privateTransPredecessor( predecessorAsSet() )
+
+context Station::indexIn( oSet: OrderedSet(Station) ) : Integer
+  -- There is no Operation
+  -- Sequence(T)>>indexOf(T): Integer!
+  -- Thats why we need indexIn.
+  -- preconditions:
+  --  seq->includes(self)
+  post: result = if oSet->at(1) = self
+                 then 1
+                 else self.indexIn( oSet->subOrderedSet(2, oSet->size()) ) + 1
+                 endif
+
+context Way::overlaps(
+    a1: Station,
+    a2: Station,
+    b1: Station,
+    b2: Station
+) : Boolean
+  -- checks if the parts (a1 to a2) and (b1 to b2)
+  -- of the Way overlap
+  -- preconditions:
+  --   self.station->includesAll( Set{a1, a2, b1, b2} ) and
+  --   self.station->at(a1) < self.station->at(a2) and
+  --   self.station->at(b1) < self.station->at(b2)
+  post: result  = (   (  b2.indexIn(self.Stops_Station)
+                       > a1.indexIn(self.Stops_Station) )
+                  and (  a2.indexIn(self.Stops_Station)
+                       > b1.indexIn(self.Stops_Station) ) )
+
+-- The following invariant is encoded by a lower bound of one
+--context Waggon
+--  inv aggregationConstraint:
+--    Train.allInstances()->exists( t |
+--        t.TrainBuildup_Waggon->includes(self)
+--    )
+
+-- The waggons of a train represent a chain.
+context Train inv Chain:
+  self.TrainBuildup_Waggon->exists( w: Waggon |
+        ( w.transPredecessor()->excludes(w) )
+    and ( w.transPredecessor()->including(w) = self.TrainBuildup_Waggon )
+  )
+
+-- A train has at most 50 waggons
+context Train
+  inv Maximum50Waggons: self.TrainBuildup_Waggon->size() <= 50
+
+-- --------------------------------------------------------------------------
+-- Section: Constraints for Station & Way
+-- --------------------------------------------------------------------------
+
+-- Station>>name is a Key-Attribute
+context Station
+  inv NameIsKeyAttribute:
+        ( not self.name.oclIsUndefined() )
+    and Station.allInstances()->forAll( s: Station |
+          (self.name = s.name) implies (self=s)
+        )
+
+-- Ways are identified by their stations
+context Way
+  inv WaysIdentifiedByStations:
+    Way.allInstances()->forAll( w: Way |
+        ( w.Stops_Station = self.Stops_Station )
+        implies ( w = self )
+    )
+
+-- --------------------------------------------------------------------------
+-- Section: Constraints ensuring correct Reservations
+-- --------------------------------------------------------------------------
+
+-- The reserved Waggon hast to be a part of the reserved journeys train.
+context Reservation inv WaggonComponentOfJourney:
+    (self.ResWaggon_Waggon.TrainBuildup_Train)
+  = (self.ResJourney_Journey.Assignment_Train)
+
+-- The "from" and "to" of a reservation must belong to the Way
+-- and have to preserve its order 
+context Reservation inv ReservedFromTo:
+      ( self.ResJourney_Journey
+            .JourneyWay_Way
+            .Stops_Station
+            ->includes( self.RFrom_Station_role_fromStation ) )
+  and ( self.ResJourney_Journey
+            .JourneyWay_Way
+            .Stops_Station
+            ->includes( self.Rto_Station_role_to ) )
+  and (  ( self.RFrom_Station_role_fromStation
+               .indexIn( self.ResJourney_Journey
+                             .JourneyWay_Way
+                             .Stops_Station ) )
+       < ( self.Rto_Station_role_to
+               .indexIn( self.ResJourney_Journey
+                             .JourneyWay_Way
+                             .Stops_Station ) ) )
+
+-- The number of the seat belonging to a reservation is greater than 0
+-- but not higher than the number of existing seats in the waggon.
+context Reservation inv SeatNumber:
+      ( self.seatNumber > 0 )
+  and ( self.seatNumber <= self.ResWaggon_Waggon.numberOfSeats )
+
+-- No multiple reservations for a seat:
+-- The combination of the number of a seat, a waggon and a part of the Way
+-- identify a reservation uniquely.
+context Journey inv NoMultipleReservations:
+  self.Assignment_Train.TrainBuildup_Waggon->forAll(w: Waggon |
+    w.ResWaggon_Reservation->forAll(res1: Reservation |
+      w.ResWaggon_Reservation->forAll(res2: Reservation |
+        ( res1.seatNumber = res2.seatNumber )
+        implies ( self.JourneyWay_Way
+                      .overlaps(
+                          res1.RFrom_Station_role_fromStation,
+                          res1.Rto_Station_role_to,
+                          res2.RFrom_Station_role_fromStation,
+                          res2.Rto_Station_role_to
+                      )
+                  implies res1 = res2)
+      )
+    )
+  )
+
+endpackage

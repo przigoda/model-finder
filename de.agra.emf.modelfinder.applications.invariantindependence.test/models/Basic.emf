@@ -1,0 +1,7 @@
+@namespace(uri="Basic", prefix="Basic")
+package Basic;
+
+class C {
+    !ordered attr int[1] a;
+    !ordered attr int[1] b;
+}

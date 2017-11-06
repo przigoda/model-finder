@@ -1,0 +1,19 @@
+@namespace(uri="TrafficPP", prefix="TrafficPP")
+package TrafficPP;
+
+class Button {
+    op void requesting();
+
+    ref TrafficLight[1]#HasButton_button HasButton_light;
+}
+
+class TrafficLight {
+    attr Boolean pedLight;
+    attr Boolean carLight;
+    attr Boolean request;
+
+    op void switchPedLight();
+    op void switchCarLight();
+    
+    ref Button[1]#HasButton_light HasButton_button;
+}

@@ -1,0 +1,31 @@
+import AccessControl : 'AccessControl.ecore#/'
+
+package AccessControl
+
+context Person
+  inv i1: situation_place->size()=1
+  inv i2: authorization_building->size()>=1
+--  inv i3: authorization_building->forall( b | authorization_building->isUnique(b))
+  inv i4: authorization_building->includes(situation_place)
+  
+
+context RPerson
+  inv i1: rsituation_rplace->size()=1
+  inv i2: rauthorization_rbuilding->size()>=1
+--  inv i3: rauthorization_rbuilding->forall( b | rauthorization_rbuilding->isUnique(b))
+  inv i4: rauthorization_rbuilding->includes(rsituation_rplace)
+
+context RBuilding
+  inv i5: communication_entry->excludes(self)
+
+context Person::pass(b:Building):
+  pre: authorization_building->includes(b)
+  pre: situation_place<>b
+  post: situation_place=b
+  
+context RPerson::pass(b:RBuilding):
+  pre: rauthorization_rbuilding->includes(b)
+  pre: rsituation_rplace.communication_entry->includes(b)
+  post: rsituation_rplace=b
+
+endpackage

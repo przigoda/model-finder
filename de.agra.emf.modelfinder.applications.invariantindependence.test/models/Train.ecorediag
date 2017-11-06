@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_ljLq0CC7EeSoSYLBudPjwA" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_ljOuICC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljPVMCC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljPVMSC7EeSoSYLBudPjwA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljPVMiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljPVMyC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljPVNCC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljPVNSC7EeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljPVNiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljPVNyC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljPVOCC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljOuISC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Train"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljOuIiC7EeSoSYLBudPjwA" x="125" y="305"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ljP8QCC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljQjUCC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljQjUSC7EeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ljRKYCC7EeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Train.ecore#//Waggon/numberOfSeats"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljRKYSC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljQjUiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljQjUyC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljQjVCC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljQjVSC7EeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_ljRKYiC7EeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Train.ecore#//Waggon/predecessorAsSet"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljRKYyC7EeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ljRxcCC7EeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Train.ecore#//Waggon/privateTransPredecessor"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljRxcSC7EeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ljRxciC7EeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Train.ecore#//Waggon/transPredecessor"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljRxcyC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljQjViC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljQjVyC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljQjWCC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljP8QSC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Waggon"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljP8QiC7EeSoSYLBudPjwA" x="610" y="255"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ljSYgCC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljSYgyC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljS_kCC7EeSoSYLBudPjwA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljS_kSC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljS_kiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljS_kyC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljS_lCC7EeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljS_lSC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljS_liC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljS_lyC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljSYgSC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Journey"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljSYgiC7EeSoSYLBudPjwA" x="115" y="180"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ljTmoCC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljTmoyC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljUNsCC7EeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ljUNuCC7EeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Train.ecore#//Station/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljUNuSC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljUNsSC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljUNsiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljUNsyC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljUNtCC7EeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_ljU0wCC7EeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Train.ecore#//Station/indexIn"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljU0wSC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljUNtSC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljUNtiC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljUNtyC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljTmoSC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Station"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljTmoiC7EeSoSYLBudPjwA" x="470" y="10"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ljU0wiC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljVb0CC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljVb0SC7EeSoSYLBudPjwA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljVb0iC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljVb0yC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljVb1CC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljVb1SC7EeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_ljVb2SC7EeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="Train.ecore#//Way/overlaps"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljVb2iC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljVb1iC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljVb1yC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljVb2CC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljU0wyC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Way"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljU0xCC7EeSoSYLBudPjwA"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ljWC4CC7EeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_ljWC4yC7EeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_ljWC5CC7EeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ljWC7CC7EeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="Train.ecore#//Reservation/seatNumber"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ljWC7SC7EeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljWC5SC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljWC5iC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljWC5yC7EeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljWC6CC7EeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ljWC6SC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ljWC6iC7EeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ljWC6yC7EeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ljWC4SC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="Train.ecore#//Reservation"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ljWC4iC7EeSoSYLBudPjwA" x="450" y="160"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ljLq0SC7EeSoSYLBudPjwA"/>
+  <element xmi:type="ecore:EPackage" href="Train.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_ljWp8CC7EeSoSYLBudPjwA" type="3002" source="_ljOuICC7EeSoSYLBudPjwA" target="_ljP8QCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljWp9CC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljWp9SC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljWp9iC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljWp9yC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljWp8SC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljWp8iC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Train/TrainBuildup_Waggon"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljWp8yC7EeSoSYLBudPjwA" points="[0, 0, -181, 60]$[181, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFCsiC7EeSoSYLBudPjwA" id="(0.5980392156862745,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFpwCC7EeSoSYLBudPjwA" id="(0.3310580204778157,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljWp-CC7EeSoSYLBudPjwA" type="3002" source="_ljOuICC7EeSoSYLBudPjwA" target="_ljSYgCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljWp_CC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljWp_SC7EeSoSYLBudPjwA" x="1" y="-62"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljWp_iC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljWp_yC7EeSoSYLBudPjwA" x="1" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljWp-SC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljWp-iC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Train/Assignment_Journey"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljWp-yC7EeSoSYLBudPjwA" points="[0, 0, 16, 84]$[-16, -84, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFpwSC7EeSoSYLBudPjwA" id="(0.19607843137254902,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFpwiC7EeSoSYLBudPjwA" id="(0.3333333333333333,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljWqACC7EeSoSYLBudPjwA" type="3002" source="_ljP8QCC7EeSoSYLBudPjwA" target="_ljOuICC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljXRACC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljXRASC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljXRAiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljXRAyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljWqASC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljWqAiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Waggon/TrainBuildup_Train"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljWqAyC7EeSoSYLBudPjwA" points="[0, 0, 259, -60]$[-259, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkCmciC7EeSoSYLBudPjwA" id="(0.6655290102389079,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkDNgCC7EeSoSYLBudPjwA" id="(0.7941176470588235,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljXRBCC7EeSoSYLBudPjwA" type="3002" source="_ljP8QCC7EeSoSYLBudPjwA" target="_ljP8QCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljXRCCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljXRCSC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljXRCiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljXRCyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljXRBSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljXRBiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Waggon/WaggonOrder_Waggon_role_successor"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljXRByC7EeSoSYLBudPjwA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljXRDCC7EeSoSYLBudPjwA" type="3002" source="_ljP8QCC7EeSoSYLBudPjwA" target="_ljP8QCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljXRECC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljXRESC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljX4ECC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljX4ESC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljXRDSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljXRDiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Waggon/WaggonOrder_Waggon_role_predecessor"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljXRDyC7EeSoSYLBudPjwA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljX4EiC7EeSoSYLBudPjwA" type="3002" source="_ljP8QCC7EeSoSYLBudPjwA" target="_ljWC4CC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljX4FiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljX4FyC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljX4GCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljX4GSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljX4EyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljX4FCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Waggon/ResWaggon_Reservation"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljX4FSC7EeSoSYLBudPjwA" points="[0, 0, 116, 60]$[-116, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkCmcCC7EeSoSYLBudPjwA" id="(0.3310580204778157,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkCmcSC7EeSoSYLBudPjwA" id="(0.7730496453900709,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljX4GiC7EeSoSYLBudPjwA" type="3002" source="_ljSYgCC7EeSoSYLBudPjwA" target="_ljOuICC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljX4HiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljX4HyC7EeSoSYLBudPjwA" x="-18" y="-51"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljX4ICC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljX4ISC7EeSoSYLBudPjwA" x="1" y="4"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljX4GyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljX4HCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Journey/Assignment_Train"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljX4HSC7EeSoSYLBudPjwA" points="[0, 0, -16, -84]$[16, 84, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RFyVYCDCEeSoSYLBudPjwA" id="(0.3333333333333333,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RFyVYSDCEeSoSYLBudPjwA" id="(0.19607843137254902,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljX4IiC7EeSoSYLBudPjwA" type="3002" source="_ljSYgCC7EeSoSYLBudPjwA" target="_ljU0wiC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljYfICC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljYfISC7EeSoSYLBudPjwA" x="-3" y="-51"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljYfIiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljYfIyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljX4IyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljX4JCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Journey/JourneyWay_Way"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljX4JSC7EeSoSYLBudPjwA" points="[0, 0, -23, 131]$[23, -131, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WckM0CDCEeSoSYLBudPjwA" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WckM0SDCEeSoSYLBudPjwA" id="(0.5654761904761905,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljYfJCC7EeSoSYLBudPjwA" type="3002" source="_ljSYgCC7EeSoSYLBudPjwA" target="_ljWC4CC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljYfKCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljYfKSC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljYfKiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljYfKyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljYfJSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljYfJiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Journey/ResJourney_Reservation"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljYfJyC7EeSoSYLBudPjwA" points="[0, 0, -204, 60]$[204, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkD0kiC7EeSoSYLBudPjwA" id="(0.6666666666666666,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkEboCC7EeSoSYLBudPjwA" id="(0.10638297872340426,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljYfLCC7EeSoSYLBudPjwA" type="3002" source="_ljTmoCC7EeSoSYLBudPjwA" target="_ljU0wiC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljYfMCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljYfMSC7EeSoSYLBudPjwA" x="2" y="-31"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljZGMCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZGMSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljYfLSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljYfLiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Station/Stops_Way"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljYfLyC7EeSoSYLBudPjwA" points="[0, 0, 110, 60]$[-110, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkIGACC7EeSoSYLBudPjwA" id="(0.2883435582822086,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkIGASC7EeSoSYLBudPjwA" id="(0.7083333333333334,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljZGMiC7EeSoSYLBudPjwA" type="3002" source="_ljTmoCC7EeSoSYLBudPjwA" target="_ljWC4CC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljZGNiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZGNyC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljZGOCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZGOSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljZGMyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljZGNCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Station/RFrom_Reservation_role_resFrom"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljZGNSC7EeSoSYLBudPjwA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkHe8iC7EeSoSYLBudPjwA" id="(0.8711656441717791,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkHe8yC7EeSoSYLBudPjwA" id="(0.3333333333333333,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljZGOiC7EeSoSYLBudPjwA" type="3002" source="_ljTmoCC7EeSoSYLBudPjwA" target="_ljWC4CC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljZGPiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZGPyC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljZGQCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZGQSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljZGOyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljZGPCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Station/Rto_Reservation_role_resTo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljZGPSC7EeSoSYLBudPjwA" points="[0, 0, -10, 60]$[10, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkItECC7EeSoSYLBudPjwA" id="(0.901840490797546,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkItESC7EeSoSYLBudPjwA" id="(0.4397163120567376,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljZGQiC7EeSoSYLBudPjwA" type="3002" source="_ljU0wiC7EeSoSYLBudPjwA" target="_ljSYgCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljZtQCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZtQSC7EeSoSYLBudPjwA" x="34" y="70"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljZtQiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZtQyC7EeSoSYLBudPjwA" x="-1" y="-19"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljZGQyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljZGRCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Way/JourneyWay_Journey"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljZGRSC7EeSoSYLBudPjwA" points="[0, 0, 23, -131]$[-23, 131, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFCsCC7EeSoSYLBudPjwA" id="(0.5654761904761905,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkFCsSC7EeSoSYLBudPjwA" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljZtRCC7EeSoSYLBudPjwA" type="3002" source="_ljU0wiC7EeSoSYLBudPjwA" target="_ljTmoCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljZtSCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZtSSC7EeSoSYLBudPjwA" x="-15" y="-19"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljZtSiC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljZtSyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljZtRSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljZtRiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Way/Stops_Station"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljZtRyC7EeSoSYLBudPjwA" points="[0, 0, -108, -60]$[108, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkEboSC7EeSoSYLBudPjwA" id="(0.8541666666666666,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkEboiC7EeSoSYLBudPjwA" id="(0.5766871165644172,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljaUUCC7EeSoSYLBudPjwA" type="3002" source="_ljWC4CC7EeSoSYLBudPjwA" target="_ljTmoCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljaUVCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljaUVSC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljaUViC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljaUVyC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljaUUSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljaUUiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Reservation/RFrom_Station_role_fromStation"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljaUUyC7EeSoSYLBudPjwA" points="[0, 0, 21, -60]$[-21, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkGQ0iC7EeSoSYLBudPjwA" id="(0.5531914893617021,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkG34CC7EeSoSYLBudPjwA" id="(0.9325153374233128,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lja7YCC7EeSoSYLBudPjwA" type="3002" source="_ljWC4CC7EeSoSYLBudPjwA" target="_ljTmoCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_lja7ZCC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lja7ZSC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljbicCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljbicSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_lja7YSC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lja7YiC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Reservation/Rto_Station_role_to"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lja7YyC7EeSoSYLBudPjwA" points="[0, 0, 32, -60]$[-32, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkG34SC7EeSoSYLBudPjwA" id="(0.6666666666666666,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkG34iC7EeSoSYLBudPjwA" id="(0.9631901840490797,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljbiciC7EeSoSYLBudPjwA" type="3002" source="_ljWC4CC7EeSoSYLBudPjwA" target="_ljSYgCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljbidiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljbidyC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljbieCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljbieSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljbicyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljbidCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Reservation/ResJourney_Journey"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljbidSC7EeSoSYLBudPjwA" points="[0, 0, 203, -60]$[-203, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkGQ0CC7EeSoSYLBudPjwA" id="(0.2198581560283688,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkGQ0SC7EeSoSYLBudPjwA" id="(0.8333333333333334,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_ljbieiC7EeSoSYLBudPjwA" type="3002" source="_ljWC4CC7EeSoSYLBudPjwA" target="_ljP8QCC7EeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_ljbifiC7EeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljbifyC7EeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ljbigCC7EeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_ljbigSC7EeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_ljbieyC7EeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_ljbifCC7EeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="Train.ecore#//Reservation/ResWaggon_Waggon"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ljbifSC7EeSoSYLBudPjwA" points="[0, 0, -198, -60]$[198, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkHe8CC7EeSoSYLBudPjwA" id="(0.8865248226950354,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lkHe8SC7EeSoSYLBudPjwA" id="(0.6655290102389079,0.0)"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,28 @@
+@namespace(uri="Phone", prefix="Phone")
+package Phone;
+
+class Phone {
+    attr int credit;
+
+    op void call();
+
+    ref Helper[1]#tmp1_phone tmp1_helper;
+    ref PhoneR[1]#tmp3_phone tmp3_phoner;
+}
+
+class PhoneR {
+    attr int creditR;
+    attr Boolean inCallR;
+
+    op void placeCallR();
+    op void closeCallR();
+
+    ref Helper[1]#tmp2_phoner tmp2_helper;
+    ref Phone[1]#tmp3_phoner tmp3_phone;
+}
+
+class Helper {
+    op void init();
+    ref Phone[1]#tmp1_helper tmp1_phone;
+    ref PhoneR[1]#tmp2_helper tmp2_phoner;
+}

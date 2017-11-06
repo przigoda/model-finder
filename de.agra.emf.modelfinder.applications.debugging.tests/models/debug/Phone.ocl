@@ -1,0 +1,30 @@
+import Phone : 'Phone.ecore#/'
+
+package Phone
+
+context Phone::call():
+  pre: credit >= 10
+  post: credit < credit@pre
+  post: tmp3_phoner.creditR = tmp3_phoner.creditR@pre
+  post: tmp3_phoner.inCallR = tmp3_phoner.inCallR@pre
+
+context PhoneR::placeCallR():
+  pre: creditR >= 10
+  post: inCallR = true
+  post: creditR = creditR@pre
+  post: tmp3_phone.credit = tmp3_phone.credit@pre
+
+context PhoneR::closeCallR():
+  pre: inCallR = true
+  pre: creditR >= 10
+  post: creditR = creditR@pre - 10
+  post: inCallR = false
+  post: tmp3_phone.credit = tmp3_phone.credit@pre
+
+--context Helper::init():
+--  post: (not tmp2_phoner.creditR.oclIsUndefined())
+--  post: (not tmp2_phoner.inCallR.oclIsUndefined())
+--  post: (not tmp1_phone.credit.oclIsUndefined())
+--  post: tmp1_phone.credit = tmp2_phoner.creditR
+
+endpackage

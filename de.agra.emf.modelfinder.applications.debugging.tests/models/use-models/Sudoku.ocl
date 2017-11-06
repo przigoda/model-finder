@@ -1,0 +1,35 @@
+import Sudoku : 'Sudoku.ecore#/'
+
+package Sudoku
+
+context Field inv allowedValue:
+  self.value >= 1 and self.value <= 9
+
+context Row inv uniqueValuesRow:
+  self.RowFields_Field_role_fields->isUnique(value)
+
+--context Column inv uniqueValuesColumn:
+--  self.ColumnFields_Field_role_fields->isUnique(value)
+
+--context Square inv uniqueValuesSquare:
+--  self.SquareFields_Field_role_fields->isUnique(value)
+  
+--context Column inv allowedColumnIndex:
+--  self.index >= 1 and self.index <= 9
+
+--context Column inv columnIndexUnique:
+--  Column.allInstances()->isUnique(index)
+  
+--context Column inv fieldUniqueColumns:
+--   self.fields->forAll(f1, f2 : Field | f1.column = f2.column)
+   
+--context Row inv allowedRowIndex:
+--  self.index >= 1 and self.index <= 9
+  
+--context Row inv rowIndexUnique:
+--  Row.allInstances()->isUnique(index)
+  
+--context Row inv fieldUniqueRows:
+--  self.fields->forAll(f1, f2 : Field | f1.row = f2.row)
+
+endpackage

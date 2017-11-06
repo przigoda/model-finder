@@ -1,0 +1,14 @@
+import FaultyUMLmodel3 : 'FaultyUMLmodel3.ecore#/'
+
+package FaultyUMLmodel3
+
+context A
+    inv c0: self.b < 3 and self.b = 7
+    inv c1: self.a + self.b = self.c
+    inv c2: self.a < 6
+    inv c3: self.a = 5
+    inv c4: self.a = 10
+    inv c5: self.d = 8
+    inv c6: self.d > 10
+
+endpackage

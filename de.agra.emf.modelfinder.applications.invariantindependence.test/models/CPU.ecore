@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="CPU" nsURI="CPU" nsPrefix="CPU">
+  <eClassifiers xsi:type="ecore:EEnum" name="Operation">
+    <eLiterals name="noop"/>
+    <eLiterals name="jump" value="1"/>
+    <eLiterals name="bez" value="2"/>
+    <eLiterals name="addition" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RegisterType">
+    <eLiterals name="general"/>
+    <eLiterals name="pc" value="1"/>
+    <eLiterals name="zero" value="2"/>
+    <eLiterals name="overflow" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CPU">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasProgramCounter_ProgramCounter_role_programcounter"
+        ordered="false" lowerBound="1" eType="#//ProgramCounter" eOpposite="#//ProgramCounter/HasProgramCounter_CPU_role_cpu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasMemory_Memory" ordered="false"
+        lowerBound="1" eType="#//Memory" eOpposite="#//Memory/HasMemory_CPU_role_cpu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasRegister_Register" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Register" eOpposite="#//Register/HasRegister_CPU_role_cpu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasControlUnit_ControlUnit"
+        ordered="false" lowerBound="1" eType="#//ControlUnit" eOpposite="#//ControlUnit/HasControlUnit_CPU_role_cpu"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasALU_ALU_role_alu" ordered="false"
+        lowerBound="1" eType="#//ALU" eOpposite="#//ALU/HasALU_CPU_role_cpu"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProgramCounter">
+    <eOperations name="increment"/>
+    <eOperations name="jump"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pc" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enable" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="jump" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasProgramCounter_CPU_role_cpu"
+        ordered="false" lowerBound="1" eType="#//CPU" eOpposite="#//CPU/HasProgramCounter_ProgramCounter_role_programcounter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ALU">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zeroFlag" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" ordered="false"
+        lowerBound="1" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasALU_CPU_role_cpu" ordered="false"
+        lowerBound="1" eType="#//CPU" eOpposite="#//CPU/HasALU_ALU_role_alu"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlUnit">
+    <eOperations name="jump"/>
+    <eOperations name="bez"/>
+    <eOperations name="add"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" ordered="false"
+        lowerBound="1" eType="#//Operation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constant" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasControlUnit_CPU_role_cpu"
+        ordered="false" lowerBound="1" eType="#//CPU" eOpposite="#//CPU/HasControlUnit_ControlUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasOperands_Register_role_register"
+        ordered="false" upperBound="2" eType="#//Register" eOpposite="#//Register/HasOperands_ControlUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Memory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="entries" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasMemory_CPU_role_cpu"
+        ordered="false" lowerBound="1" eType="#//CPU" eOpposite="#//CPU/HasMemory_Memory"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Register">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
+        eType="#//RegisterType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasRegister_CPU_role_cpu"
+        ordered="false" lowerBound="1" eType="#//CPU" eOpposite="#//CPU/HasRegister_Register"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasOperands_ControlUnit"
+        ordered="false" eType="#//ControlUnit" eOpposite="#//ControlUnit/HasOperands_Register_role_register"/>
+  </eClassifiers>
+</ecore:EPackage>

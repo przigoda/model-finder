@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_9O-kcCePEeSV6dHExUkiXQ" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_9RqsECePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9RrTICePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9RrTISePEeSV6dHExUkiXQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RrTIiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RrTIyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RrTJCePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9Rr6MCePEeSV6dHExUkiXQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9Rr6MSePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9Rr6MiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9Rr6MyePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9RqsESePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//CPU"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RqsEiePEeSV6dHExUkiXQ" x="514" y="337"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9Rr6NCePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9RshQCePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9RshQSePEeSV6dHExUkiXQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9RtIUCePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ProgramCounter/pc"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RtIUSePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RtIUiePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ProgramCounter/enable"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RtIUyePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RtIVCePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ProgramCounter/jump.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RtIVSePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RshQiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RshQyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RshRCePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9RshRSePEeSV6dHExUkiXQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_9RtvYCePEeSV6dHExUkiXQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="CPU.ecore#//ProgramCounter/increment"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RtvYSePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RtvYiePEeSV6dHExUkiXQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="CPU.ecore#//ProgramCounter/jump"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RtvYyePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RshRiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RshRyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RshSCePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9Rr6NSePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//ProgramCounter"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Rr6NiePEeSV6dHExUkiXQ" x="10" y="150"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9RtvZCePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9RuWcCePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9RuWcSePEeSV6dHExUkiXQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9RuWeSePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ALU/zeroFlag"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RuWeiePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RuWeyePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ALU/operation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RuWfCePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RuWciePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RuWcyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RuWdCePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9RuWdSePEeSV6dHExUkiXQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RuWdiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RuWdyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RuWeCePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9RtvZSePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//ALU"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RtvZiePEeSV6dHExUkiXQ" x="197" y="167"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9Ru9gCePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9Ru9gyePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9Ru9hCePEeSV6dHExUkiXQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9RvkkCePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ControlUnit/operation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RvkkSePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RvkkiePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//ControlUnit/constant"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RvkkyePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9Ru9hSePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9Ru9hiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9Ru9hyePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9Ru9iCePEeSV6dHExUkiXQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_9RvklCePEeSV6dHExUkiXQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="CPU.ecore#//ControlUnit/jump"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RvklSePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RwLoCePEeSV6dHExUkiXQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="CPU.ecore#//ControlUnit/bez"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RwLoSePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RwLoiePEeSV6dHExUkiXQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="CPU.ecore#//ControlUnit/add"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RwLoyePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9Ru9iSePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9Ru9iiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9Ru9iyePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9Ru9gSePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//ControlUnit"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Ru9giePEeSV6dHExUkiXQ" x="585" y="167"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9RwLpCePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9RwysCePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9RwysSePEeSV6dHExUkiXQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9RwyuSePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//Memory/entries"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RwyuiePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RwysiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RwysyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RwytCePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9RwytSePEeSV6dHExUkiXQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RwytiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RwytyePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RwyuCePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9RwLpSePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//Memory"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RwLpiePEeSV6dHExUkiXQ" x="418" y="167"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9RxZwCePEeSV6dHExUkiXQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9RxZwyePEeSV6dHExUkiXQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9RxZxCePEeSV6dHExUkiXQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_9RyA0CePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//Register/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RyA0SePEeSV6dHExUkiXQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_9RyA0iePEeSV6dHExUkiXQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CPU.ecore#//Register/value"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_9RyA0yePEeSV6dHExUkiXQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RxZxSePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RxZxiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RxZxyePEeSV6dHExUkiXQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9RxZyCePEeSV6dHExUkiXQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9RxZySePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9RxZyiePEeSV6dHExUkiXQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9RxZyyePEeSV6dHExUkiXQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9RxZwSePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CPU.ecore#//Register"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9RxZwiePEeSV6dHExUkiXQ" x="794"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_9O-kcSePEeSV6dHExUkiXQ"/>
+  <element xmi:type="ecore:EPackage" href="CPU.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_9RzO8CePEeSV6dHExUkiXQ" type="3002" source="_9RqsECePEeSV6dHExUkiXQ" target="_9Rr6NCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9Rz2ACePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9Rz2ASePEeSV6dHExUkiXQ" x="-164" y="-26"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R0dECePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R0dESePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9RzO8SePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9RzO8iePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//CPU/HasProgramCounter_ProgramCounter_role_programcounter"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9RzO8yePEeSV6dHExUkiXQ" points="[-8, 0, 460, 79]$[-468, 0, 0, 79]$[-468, -79, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UBcgCePEeSV6dHExUkiXQ" id="(0.08823529411764706,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UBcgSePEeSV6dHExUkiXQ" id="(0.3284671532846715,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R0dEiePEeSV6dHExUkiXQ" type="3002" source="_9RqsECePEeSV6dHExUkiXQ" target="_9RwLpCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R0dFiePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R0dFyePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R0dGCePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R0dGSePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R0dEyePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R0dFCePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//CPU/HasMemory_Memory"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R0dFSePEeSV6dHExUkiXQ" points="[0, 0, 107, 119]$[-107, -119, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UCDkCePEeSV6dHExUkiXQ" id="(0.45098039215686275,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UCDkSePEeSV6dHExUkiXQ" id="(0.32710280373831774,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R1EICePEeSV6dHExUkiXQ" type="3002" source="_9RqsECePEeSV6dHExUkiXQ" target="_9RxZwCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R1EJCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1EJSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R1EJiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1EJyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R1EISePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R1EIiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//CPU/HasRegister_Register"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R1EIyePEeSV6dHExUkiXQ" points="[0, 0, -268, 269]$[268, -61, 0, 208]$[268, -269, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UIKMCePEeSV6dHExUkiXQ" id="(0.8137254901960784,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UIxQCePEeSV6dHExUkiXQ" id="(0.4896551724137931,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R1EKCePEeSV6dHExUkiXQ" type="3002" source="_9RqsECePEeSV6dHExUkiXQ" target="_9Ru9gCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R1ELCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1ELSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R1rMCePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1rMSePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R1EKSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R1EKiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//CPU/HasControlUnit_ControlUnit"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R1EKyePEeSV6dHExUkiXQ" points="[0, 0, -60, 60]$[60, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UCqoCePEeSV6dHExUkiXQ" id="(0.6274509803921569,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UCqoSePEeSV6dHExUkiXQ" id="(0.32919254658385094,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R1rMiePEeSV6dHExUkiXQ" type="3002" source="_9RqsECePEeSV6dHExUkiXQ" target="_9RtvZCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R1rNiePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1rNyePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R1rOCePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R1rOSePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R1rMyePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R1rNCePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//CPU/HasALU_ALU_role_alu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R1rNSePEeSV6dHExUkiXQ" points="[0, 0, 291, 102]$[-190, -61, 101, 41]$[-291, -102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UDRsCePEeSV6dHExUkiXQ" id="(0.2647058823529412,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UDRsSePEeSV6dHExUkiXQ" id="(0.32919254658385094,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R1rOiePEeSV6dHExUkiXQ" type="3002" source="_9Rr6NCePEeSV6dHExUkiXQ" target="_9RqsECePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R2SQCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R2SQSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R2SQiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R2SQyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R1rOyePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R1rPCePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//ProgramCounter/HasProgramCounter_CPU_role_cpu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R1rPSePEeSV6dHExUkiXQ" points="[0, 0, -468, -79]$[0, 79, -468, 0]$[460, 79, -8, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pVkyQCepEeSV6dHExUkiXQ" id="(0.3284671532846715,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pVlZUCepEeSV6dHExUkiXQ" id="(0.08823529411764706,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R2SRCePEeSV6dHExUkiXQ" type="3002" source="_9RtvZCePEeSV6dHExUkiXQ" target="_9RqsECePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R2SSCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R2SSSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R2SSiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R2SSyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R2SRSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R2SRiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//ALU/HasALU_CPU_role_cpu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R2SRyePEeSV6dHExUkiXQ" points="[0, 0, -247, -102]$[10, 41, -237, -61]$[247, 102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UG8ECePEeSV6dHExUkiXQ" id="(0.6645962732919255,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UHjICePEeSV6dHExUkiXQ" id="(0.3627450980392157,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R2STCePEeSV6dHExUkiXQ" type="3002" source="_9Ru9gCePEeSV6dHExUkiXQ" target="_9RqsECePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R25UCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R25USePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R25UiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R25UyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R2STSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R2STiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//ControlUnit/HasControlUnit_CPU_role_cpu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R2STyePEeSV6dHExUkiXQ" points="[0, 0, 104, -60]$[-104, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UFt8CePEeSV6dHExUkiXQ" id="(0.6645962732919255,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UGVACePEeSV6dHExUkiXQ" id="(0.7254901960784313,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R25VCePEeSV6dHExUkiXQ" type="3002" source="_9Ru9gCePEeSV6dHExUkiXQ" target="_9RxZwCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R25WCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R25WSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R25WiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R25WyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R25VSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R25ViePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//ControlUnit/HasOperands_Register_role_register"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R25VyePEeSV6dHExUkiXQ" points="[0, 0, -179, 99]$[179, -99, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UFG4CePEeSV6dHExUkiXQ" id="(0.32919254658385094,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UFG4SePEeSV6dHExUkiXQ" id="(0.15862068965517243,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R3gYCePEeSV6dHExUkiXQ" type="3002" source="_9RwLpCePEeSV6dHExUkiXQ" target="_9RqsECePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R3gZCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R3gZSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R3gZiePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R3gZyePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R3gYSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R3gYiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//Memory/HasMemory_CPU_role_cpu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R3gYyePEeSV6dHExUkiXQ" points="[0, 0, -80, -119]$[10, 58, -70, -61]$[80, 119, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UD4wCePEeSV6dHExUkiXQ" id="(0.6635514018691588,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UD4wSePEeSV6dHExUkiXQ" id="(0.5392156862745098,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R3gaCePEeSV6dHExUkiXQ" type="3002" source="_9RxZwCePEeSV6dHExUkiXQ" target="_9RqsECePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R3gbCePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R3gbSePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R4HcCePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R4HcSePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R3gaSePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R3gaiePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//Register/HasRegister_CPU_role_cpu"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R3gayePEeSV6dHExUkiXQ" points="[0, 0, 296, -269]$[144, 99, 440, -170]$[144, 208, 440, -61]$[-296, 269, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UJYUCePEeSV6dHExUkiXQ" id="(0.7448275862068966,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UJ_YCePEeSV6dHExUkiXQ" id="(0.9019607843137255,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_9R4HciePEeSV6dHExUkiXQ" type="3002" source="_9RxZwCePEeSV6dHExUkiXQ" target="_9Ru9gCePEeSV6dHExUkiXQ">
+    <children xmi:type="notation:Node" xmi:id="_9R4HdiePEeSV6dHExUkiXQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R4HdyePEeSV6dHExUkiXQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9R4HeCePEeSV6dHExUkiXQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_9R4HeSePEeSV6dHExUkiXQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_9R4HcyePEeSV6dHExUkiXQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_9R4HdCePEeSV6dHExUkiXQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CPU.ecore#//Register/HasOperands_ControlUnit"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9R4HdSePEeSV6dHExUkiXQ" points="[0, 0, 149, -99]$[-149, 99, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UAOYCePEeSV6dHExUkiXQ" id="(0.32413793103448274,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9UA1cCePEeSV6dHExUkiXQ" id="(0.6645962732919255,0.0)"/>
+  </edges>
+</notation:Diagram>

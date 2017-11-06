@@ -1,0 +1,25 @@
+@namespace(uri="Demo", prefix="Demo")
+package Demo;
+
+class Employee {
+  !ordered attr boolean[1] name;
+  !ordered attr int[1] salary;
+  !ordered ref Department[+]#WorksIn_employee WorksIn_department;
+  !ordered ref Project[*]#WorksOn_employee WorksOn_project;
+}
+
+class Department {
+  !ordered attr boolean[1] name;
+  !ordered attr boolean[1] location;
+  !ordered attr int[1] budget;
+  !ordered ref Employee[*]#WorksIn_department WorksIn_employee;
+  !ordered ref Project[*]#Controls_department Controls_project;
+}
+
+class Project {
+  !ordered attr boolean[1] name;
+  !ordered attr int[1] budget;
+  !ordered ref Employee[*]#WorksOn_project WorksOn_employee;
+  !ordered ref Department[1]#Controls_project Controls_department;
+}
+

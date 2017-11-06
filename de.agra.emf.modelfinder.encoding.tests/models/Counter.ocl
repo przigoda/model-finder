@@ -1,0 +1,31 @@
+import Counter : 'Counter.ecore#/'
+
+package Counter
+
+context Counter::count():
+    post countpost1: value = 1 + value@pre
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+--    post modifies : self
+    post modifies : self.value
+    post modifies : self.constant
+--    post modifies : Set{self}.value
+
+context Counter::count2():
+    post countpost1: (self.value = 2 + self.value@pre) -- xor (value = 2) xor true
+--    post modifies : self.value
+    post modifies : self.constant
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+
+context Counter::count3():
+    post countpost1: self.value = 3 + self.value@pre
+--    post modifies : self.value
+    post modifies : self.constant
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+
+context Counter
+    inv bound: self.value < 32
+    inv bound: self.value >= 0
+--    inv: not self.a.oclIsUndefined()
+--    inv: if self = self then if true then true else self = self endif else true endif
+
+endpackage

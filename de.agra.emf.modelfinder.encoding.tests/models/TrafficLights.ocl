@@ -1,0 +1,40 @@
+import TrafficLights : 'TrafficLights.ecore#/'
+
+package TrafficLights
+
+context Button::requesting():
+    pre requestingPre1: TrafficLight.allInstances()->forAll(t | t.pedLight = false)
+    post requestingPost1: TrafficLight.allInstances()->forAll(t | t.request )
+    post requestingPost2: self.counter = self.counter@pre + 1
+    post requestingPost3: self.counter > self.counter@pre -- for forbid a overflow
+-- for no changes in all other state variable the following post-conditions are added
+--    post requestingPost3: TrafficLight.allInstances()->forAll(t | t.pedLight = t.pedLight@pre )
+--    post requestingPost4: TrafficLight.allInstances()->forAll(t | t.carLight = t.carLight@pre)
+
+context TrafficLight::switchPedLight():
+    pre switchPedLightPre1: self.request
+    post switchPedLightPost1: not ( self.pedLight = self.pedLight@pre )
+    post switchPedLightPost2: not ( self.request )
+-- for no changes in all other state variable the following post-conditions are added
+--    post switchPedLightPost3: TrafficLight.allInstances()->forAll(t | t.carLight = t.carLight@pre)
+--    post switchPedLightPost3: Button.allInstances()->forAll(t | t.counter = t.counter@pre )
+
+context TrafficLight::switchCarLight():
+    post switchCarLightPost1: not ( self.carLight = self.carLight@pre )
+-- for no changes in all other state variable the following post-conditions are added
+--    post switchCarLightPost2: TrafficLight.allInstances()->forAll(t | t.pedLight = t.pedLight@pre)
+--    post switchCarLightPost3: TrafficLight.allInstances()->forAll(t | t.request = t.request@pre)
+--    post switchCarLightPost4: Button.allInstances()->forAll(t | t.counter = t.counter@pre )
+
+----
+
+context TrafficLight
+    inv notBothLightsOnv1: not ( self.pedLight and self.carLight ) 
+--    inv notBothLightsOnv2: not ( self.pedLight = true and self.carLight = true)
+--    inv notBothLightsOnv3: self.pedLight = false or self.carLight = false
+
+----
+-- The last three invariants should be equivalent
+-- --> Tests have shown that they are in fact equivalent
+
+endpackage

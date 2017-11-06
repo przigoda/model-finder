@@ -1,0 +1,97 @@
+@emf.gen(basePackage="de.agra.emf.SMTlib2extended")
+@namespace(uri="de.agra.SMTlib2extended", prefix="de.agra.SMTlib2extended")
+package SMTlib2extended;
+
+class Instance {
+  val Variable[*] variables;
+  val Expression[*] assertions;
+}
+
+class NamedElement {
+  attr String name;
+}
+
+class Variable extends NamedElement {}
+class Predicate extends Variable {}
+
+class Bitvector extends Variable {
+  attr int width;
+}
+
+class Expression {}
+
+class VariableExpression extends Expression {
+  ref Variable[1] variable;
+}
+
+class ConstBooleanExpression extends Expression {
+  attr boolean value;
+}
+
+class ConstIntegerExpression extends Expression {
+  attr int value;
+  attr int width;
+}
+
+class BitstringExpression extends Expression {
+  attr String value;
+}
+
+class NAryExpression extends Expression {
+  ref Expression[*] expressions;
+}
+
+class AndExpression extends NAryExpression {}
+class OrExpression extends NAryExpression {}
+class ConcatExpression extends NAryExpression {}
+
+class BinaryExpression extends Expression {
+  ref Expression[1] lhs;
+  ref Expression[1] rhs;
+}
+
+class AddExpression extends BinaryExpression {}
+class DivExpression extends BinaryExpression {}
+class SubExpression extends BinaryExpression {}
+class MulExpression extends BinaryExpression {}
+class ModExpression extends BinaryExpression {}
+class EqualsExpression extends BinaryExpression {}
+class GreaterExpression extends BinaryExpression {}
+class GreaterEqualsExpression extends BinaryExpression {}
+class ImpliesExpression extends BinaryExpression {}
+class LessExpression extends BinaryExpression {}
+class LessEqualsExpression extends BinaryExpression {}
+class NandExpression extends BinaryExpression {}
+
+class UnaryExpression extends Expression {
+  ref Expression[1] expr;
+}
+
+class NotExpression extends UnaryExpression {}
+class OneHotExpression extends UnaryExpression {}
+
+class ExtractIndexExpression extends UnaryExpression {
+  attr int index;
+}
+
+class BvNotExpression extends UnaryExpression {}
+class BvOrExpression extends BinaryExpression {}
+class BvAndExpression extends BinaryExpression {}
+
+
+class IteExpression extends Expression {
+  ref Expression[1] condition;
+  ref Expression[1] thenexpr;
+  ref Expression[1] elseexpr;
+}
+
+class CardExpression extends Expression {
+  attr int k;
+  ref VariableExpression[*] variables;
+}
+
+class CardEqExpression extends CardExpression {}
+class CardGeExpression extends CardExpression {}
+class CardGtExpression extends CardExpression {}
+class CardLeExpression extends CardExpression {}
+class CardLtExpression extends CardExpression {}

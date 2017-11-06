@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_HTAqUDK2EeStJ71sJfBofQ" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_HVG8EDK2EeStJ71sJfBofQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_HVNCsDK2EeStJ71sJfBofQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_HVOQ0DK2EeStJ71sJfBofQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_HVYB0DK2EeStJ71sJfBofQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="PersonCompany.ecore#//Person/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVYB0TK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVOQ0TK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVOQ0jK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVOQ0zK2EeStJ71sJfBofQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVTJUDK2EeStJ71sJfBofQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_HVZP8DK2EeStJ71sJfBofQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="PersonCompany.ecore#//Person/employer"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVZP8TK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVTJUTK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVTJUjK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVTJUzK2EeStJ71sJfBofQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_HVG8ETK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="PersonCompany.ecore#//Person"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HVG8EjK2EeStJ71sJfBofQ" y="153"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_HVZP8jK2EeStJ71sJfBofQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_HVaeEDK2EeStJ71sJfBofQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_HVaeETK2EeStJ71sJfBofQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_HVbFJDK2EeStJ71sJfBofQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="PersonCompany.ecore#//Company/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVbFJTK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVaeEjK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVaeEzK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVaeFDK2EeStJ71sJfBofQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVbFIDK2EeStJ71sJfBofQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_HVbsMDK2EeStJ71sJfBofQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="PersonCompany.ecore#//Company/employee"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVbsMTK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVbFITK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVbFIjK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVbFIzK2EeStJ71sJfBofQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_HVZP8zK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="PersonCompany.ecore#//Company"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HVZP9DK2EeStJ71sJfBofQ" x="224" y="153"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_HVcTQDK2EeStJ71sJfBofQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_HVc6UDK2EeStJ71sJfBofQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_HVc6UTK2EeStJ71sJfBofQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_HVevgDK2EeStJ71sJfBofQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="PersonCompany.ecore#//Job/salary"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVevgTK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVc6UjK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVc6UzK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVc6VDK2EeStJ71sJfBofQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVeIcDK2EeStJ71sJfBofQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_HVfWkDK2EeStJ71sJfBofQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="PersonCompany.ecore#//Job/bossPlus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVfWkTK2EeStJ71sJfBofQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_HVf9oDK2EeStJ71sJfBofQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="PersonCompany.ecore#//Job/workerPlus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVf9oTK2EeStJ71sJfBofQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_HVgksDK2EeStJ71sJfBofQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="PersonCompany.ecore#//Job/workerPlusOnSet"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_HVgksTK2EeStJ71sJfBofQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_HVeIcTK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_HVeIcjK2EeStJ71sJfBofQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_HVeIczK2EeStJ71sJfBofQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_HVcTQTK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="PersonCompany.ecore#//Job"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HVcTQjK2EeStJ71sJfBofQ" x="93"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_HTAqUTK2EeStJ71sJfBofQ"/>
+  <element xmi:type="ecore:EPackage" href="PersonCompany.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_HVjoADK2EeStJ71sJfBofQ" type="3002" source="_HVG8EDK2EeStJ71sJfBofQ" target="_HVcTQDK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVldMDK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVldMTK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVmrUDK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVmrUTK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVjoATK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVjoAjK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Person/PersonJob_Job_role_job"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVjoAzK2EeStJ71sJfBofQ" points="[0, 0, -47, 60]$[47, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgtvIDK2EeStJ71sJfBofQ" id="(0.32926829268292684,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgtvITK2EeStJ71sJfBofQ" id="(0.041237113402061855,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HVnSYDK2EeStJ71sJfBofQ" type="3002" source="_HVZP8jK2EeStJ71sJfBofQ" target="_HVcTQDK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVn5cDK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVn5cTK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVn5cjK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVn5czK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVnSYTK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVnSYjK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Company/CompanyJob_Job_role_job"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVnSYzK2EeStJ71sJfBofQ" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Hgqr0DK2EeStJ71sJfBofQ" id="(0.3333333333333333,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgrS4DK2EeStJ71sJfBofQ" id="(0.9329896907216495,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HVoggDK2EeStJ71sJfBofQ" type="3002" source="_HVcTQDK2EeStJ71sJfBofQ" target="_HVG8EDK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVoghDK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVoghTK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVpHkDK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVpHkTK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVoggTK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVoggjK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Job/PersonJob_Person_role_employee"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVoggzK2EeStJ71sJfBofQ" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgwycDK2EeStJ71sJfBofQ" id="(0.08247422680412371,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgxZgDK2EeStJ71sJfBofQ" id="(0.6646341463414634,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HVpHkjK2EeStJ71sJfBofQ" type="3002" source="_HVcTQDK2EeStJ71sJfBofQ" target="_HVZP8jK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVpuoDK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVpuoTK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVpuojK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVpuozK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVpHkzK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVpHlDK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Job/CompanyJob_Company_role_employer"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVpHlTK2EeStJ71sJfBofQ" points="[0, 0, -44, -60]$[44, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgvkUDK2EeStJ71sJfBofQ" id="(0.9639175257731959,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HgvkUTK2EeStJ71sJfBofQ" id="(0.6666666666666666,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HVqVsDK2EeStJ71sJfBofQ" type="3002" source="_HVcTQDK2EeStJ71sJfBofQ" target="_HVcTQDK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVq8wDK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVq8wTK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVq8wjK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVq8wzK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVqVsTK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVqVsjK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Job/BossWorker_Job_role_worker"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVqVszK2EeStJ71sJfBofQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HVq8xDK2EeStJ71sJfBofQ" type="3002" source="_HVcTQDK2EeStJ71sJfBofQ" target="_HVcTQDK2EeStJ71sJfBofQ">
+    <children xmi:type="notation:Node" xmi:id="_HVrj0DK2EeStJ71sJfBofQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVrj0TK2EeStJ71sJfBofQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HVrj0jK2EeStJ71sJfBofQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HVrj0zK2EeStJ71sJfBofQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HVq8xTK2EeStJ71sJfBofQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HVq8xjK2EeStJ71sJfBofQ" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="PersonCompany.ecore#//Job/BossWorker_Job_role_boss"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HVq8xzK2EeStJ71sJfBofQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

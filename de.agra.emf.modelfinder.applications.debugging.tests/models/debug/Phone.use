@@ -1,0 +1,55 @@
+model Phone
+
+class Phone
+attributes
+  credit: Integer
+operations
+  call()
+  pre: credit >= 10
+  post: credit < credit@pre
+  post: phoner.creditR = phoner.creditR@pre
+  post: phoner.inCallR = phoner.inCallR@pre
+end
+    
+class PhoneR
+attributes
+  creditR: Integer
+  inCallR: Boolean
+operations
+  placeCallR()
+  pre: creditR >= 10
+  post: inCallR = true
+  post: creditR = creditR@pre
+  post: phone.credit = phone.credit@pre
+  closeCallR()
+  pre: inCallR = true
+  pre: creditR >= 10
+  post: creditR = creditR@pre - 10
+  post: inCallR = false
+  post: phone.credit = phone.credit@pre
+end
+
+class Helper
+attributes
+operations
+  init()
+  post: phoner.creditR.isDefined()
+  post: phoner.inCallR.isDefined()
+  post: phone.credit.isDefined()
+  post: phone.credit = phoner.creditR
+end
+
+association tmp1 between
+  Helper[1] role helper
+  Phone[1] role phone
+end
+
+association tmp2 between
+  Helper[1] role helper
+  PhoneR[1] role phoner
+end
+
+association tmp3 between
+  Phone[1] role phone
+  PhoneR[1] role phoner
+end

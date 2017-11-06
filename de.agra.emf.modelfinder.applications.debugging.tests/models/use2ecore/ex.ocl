@@ -1,0 +1,19 @@
+import Company : 'ex.ecore#/'
+
+package Company
+
+context Department 
+  inv i1a: self.budget >= 0
+  inv i2:  self.WorksIn_Employee->size() >= self.Controls_Project->size()
+
+context Employee 
+  inv i1b: self.salary >= 0
+  inv i3:  Employee.allInstances()->forAll(e1, e2 | 
+            e1.WorksOn_Project->size() > e2.WorksOn_Project->size() implies e1.salary > e2.salary)
+
+context Project 
+  inv i1c: self.budget >= 0
+  inv i4:  self.budget <= self.Controls_Department.budget
+  inv i5:  self.Controls_Department.WorksIn_Employee->includesAll(self.WorksOn_Employee)
+
+endpackage

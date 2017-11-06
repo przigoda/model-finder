@@ -1,0 +1,130 @@
+model CPU
+
+enum RegisterType { general, pc, zero, overflow }
+enum Operation { noop, jump, bez, addition }
+
+class ProgramCounter
+attributes
+  pc: Integer
+  enable: Boolean
+  jump: Integer
+operations
+  increment()
+  pre: pc <> 127
+  post po1: pc = pc@pre + 1
+  post: cpu.alu.zeroFlag = cpu.alu.zeroFlag@pre
+  post: cpu.register.forAll(r|r.type = r.type@pre)
+  post: cpu.memory.entries = cpu.memory.entries@pre
+  post: cpu.register.one(r|r.type = #pc and r.value = pc)
+  post: cpu.register.forAll(r|r.type <> #pc and r.value = r.value@pre)
+  jump()
+  pre p1: enable = true
+  pre p2: jump.isDefined()
+  pre: jump < cpu.memory.entries
+  post po1: pc = jump@pre
+  post: cpu.alu.zeroFlag = cpu.alu.zeroFlag@pre
+  post: cpu.register.forAll(r|r.type = r.type@pre)
+  post: cpu.memory.entries = cpu.memory.entries@pre
+  post: cpu.register.one(r|r.type = #pc and r.value = pc)
+end
+
+class ControlUnit
+attributes
+  operation: Operation
+  constant: Integer
+operations
+  jump()
+  pre p1: operation = #jump
+  pre p2: constant.isDefined()
+  post po1: cpu.programcounter.jump = constant
+  post po2: cpu.programcounter.enable = true
+  post po3: cpu.programcounter.pc = cpu.programcounter.pc@pre
+  post: cpu.alu.zeroFlag = cpu.alu.zeroFlag@pre
+  post: cpu.register.forAll(r|r.type = r.type@pre)
+  post: cpu.register.forAll(r|r.value = r.value@pre)
+  post: cpu.memory.entries = cpu.memory.entries@pre
+
+  bez()
+  pre p1: operation = #bez
+  pre p2: constant.isDefined()
+  post po1: cpu.programcounter.enable = cpu.alu.zeroFlag
+  post po2: cpu.alu.zeroFlag.isDefined() implies cpu.programcounter.jump = constant
+  post po3: cpu.programcounter.pc = cpu.programcounter.pc@pre
+  post: cpu.alu.zeroFlag = cpu.alu.zeroFlag@pre
+  post: cpu.register.forAll(r|r.type = r.type@pre)
+  post: cpu.register.forAll(r|r.value = r.value@pre)
+  post: cpu.memory.entries = cpu.memory.entries@pre
+
+  add()
+  pre p1: operation = #addition
+  pre p2: constant.isUndefined()
+  post po1: cpu.alu.operation = #addition
+  post po3: cpu.programcounter.pc = cpu.programcounter.pc@pre
+  post: cpu.alu.zeroFlag = cpu.alu.zeroFlag@pre
+  post: cpu.register.forAll(r|r.type = r.type@pre)
+  post: cpu.register.forAll(r|r.value = r.value@pre)
+  post: cpu.memory.entries = cpu.memory.entries@pre
+
+constraints
+  inv i1: operation = #jump implies register->size() = 0
+  inv i2: operation = #bez implies register->size() = 0
+  inv i3: operation = #addition implies register->size() = 2
+end
+
+class ALU
+attributes
+  zeroFlag: Boolean
+  operation: Operation
+constraints
+  inv i1: zeroFlag.isDefined()
+end
+
+class Memory
+attributes
+  entries: Integer
+end
+
+class CPU
+constraints
+  inv PC_in_Range: programcounter.pc < memory.entries
+  inv Has_PC_Register: register.one(r|r.type = #pc)
+  inv PC_sync_Register_value: register.one(r|r.type = #pc and r.value = programcounter.pc)
+end
+
+class Register
+attributes
+  type: RegisterType
+  value: Integer
+constraints
+  inv defined: type.isDefined() and value.isDefined()
+end
+
+association HasProgramCounter between
+  CPU[1] role cpu
+  ProgramCounter[1] role programcounter
+end
+
+association HasMemory between
+  CPU[1] role cpu
+  Memory[1]
+end
+
+association HasRegister between
+  CPU[1] role cpu
+  Register[1..*]
+end
+
+association HasControlUnit between
+  CPU[1] role cpu
+  ControlUnit[1]
+end
+
+association HasALU between
+  CPU[1] role cpu
+  ALU[1] role alu
+end
+
+association HasOperands between
+  ControlUnit[0..1]
+  Register[0..2] role register
+end

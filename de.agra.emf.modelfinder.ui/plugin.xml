@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="de.agra.emf.modelfinder.ui.commands.verif"
+            name="Verification Category">
+      </category>
+      <command
+            categoryId="de.agra.emf.modelfinder.ui.commands.verif"
+            id="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand"
+            name="Check Consistency Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.agra.emf.modelfinder.ui.handlers.CheckConsistencyHandler"
+            commandId="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="de.agra.emf.modelfinder.ui.menus.modelfinderMenu"
+               label="Modelfinder"
+               mnemonic="M">
+            <command
+                  commandId="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand"
+                  id="de.agra.emf.modelfinder.ui.menus.checkConsistencyCommand"
+                  label="check consistency"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="de.agra.emf.modelfinder.ui.toolbars.modelfinderToolbar">
+            <command
+                  commandId="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand"
+                  icon="icons/check.gif"
+                  id="de.agra.emf.modelfinder.ui.toolbars.checkConsistencyCommand"
+                  tooltip="check consistency">
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="Modelfinder">
+            <command
+                  commandId="de.agra.emf.modelfinder.ui.commands.checkConsistencyCommand"
+                  label="check consistency"
+                  style="push">
+            </command>
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="1">
+                  </count>
+               </with>
+            </visibleWhen>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>

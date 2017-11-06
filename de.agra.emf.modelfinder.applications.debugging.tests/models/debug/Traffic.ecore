@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Traffic" nsURI="Traffic" nsPrefix="Traffic">
+  <eClassifiers xsi:type="ecore:EEnum" name="Direction">
+    <eLiterals name="NorthSouth"/>
+    <eLiterals name="WestEast" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficLight">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="direction" eType="#//Direction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasPedLight_pedestrianLight"
+        lowerBound="1" eType="#//PedestrianLight" eOpposite="#//PedestrianLight/HasPedLight_trafficLight"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasCarLight_carLight" lowerBound="1"
+        eType="#//CarLight" eOpposite="#//CarLight/HasCarLight_trafficLight"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PedestrianLight">
+    <eOperations name="switch"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="greenLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasPedLight_trafficLight"
+        lowerBound="1" eType="#//TrafficLight" eOpposite="#//TrafficLight/HasPedLight_pedestrianLight"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CarLight">
+    <eOperations name="switchRedToRedYellow"/>
+    <eOperations name="switchRedYellowToGreen"/>
+    <eOperations name="switchGreenToYellow"/>
+    <eOperations name="switchYellowToRed"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="redLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="yellowLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="greenLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasCarLight_trafficLight"
+        lowerBound="1" eType="#//TrafficLight" eOpposite="#//TrafficLight/HasCarLight_carLight"/>
+  </eClassifiers>
+</ecore:EPackage>

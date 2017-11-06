@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="CarRental2" nsURI="CarRental2" nsPrefix="CarRental2">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true">
+    <eOperations name="fullname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eParameters name="prefix" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isMarried" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Customer" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Booking_Rental" ordered="false"
+        upperBound="-1" eType="#//Rental" eOpposite="#//Rental/Booking_Customer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee" eSuperTypes="#//Person">
+    <eOperations name="raiseSalary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="amount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Management_Branch_role_managedBranch"
+        ordered="false" eType="#//Branch" eOpposite="#//Branch/Management_Employee_role_manager"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Employment_Branch_role_employer"
+        ordered="false" lowerBound="1" eType="#//Branch" eOpposite="#//Branch/Employment_Employee_role_employee"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Branch">
+    <eOperations name="rentalsForDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Management_Employee_role_manager"
+        ordered="false" lowerBound="1" eType="#//Employee" eOpposite="#//Employee/Management_Branch_role_managedBranch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Employment_Employee_role_employee"
+        ordered="false" upperBound="-1" eType="#//Employee" eOpposite="#//Employee/Employment_Branch_role_employer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Fleet_Car" ordered="false"
+        upperBound="-1" eType="#//Car" eOpposite="#//Car/Fleet_Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Offers_CarGroup" ordered="false"
+        upperBound="-1" eType="#//CarGroup" eOpposite="#//CarGroup/Offers_Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Provider_Rental" ordered="false"
+        upperBound="-1" eType="#//Rental" eOpposite="#//Rental/Provider_Branch"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rental">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="untilDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Booking_Customer" ordered="false"
+        lowerBound="1" eType="#//Customer" eOpposite="#//Customer/Booking_Rental"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Provider_Branch" ordered="false"
+        lowerBound="1" eType="#//Branch" eOpposite="#//Branch/Provider_Rental"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reservation_CarGroup" ordered="false"
+        lowerBound="1" eType="#//CarGroup" eOpposite="#//CarGroup/Reservation_Rental"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Assignment_Car" ordered="false"
+        eType="#//Car" eOpposite="#//Car/Assignment_Rental"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CarGroup">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Offers_Branch" ordered="false"
+        upperBound="-1" eType="#//Branch" eOpposite="#//Branch/Offers_CarGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Classification_Car" ordered="false"
+        upperBound="-1" eType="#//Car" eOpposite="#//Car/Classification_CarGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reservation_Rental" ordered="false"
+        upperBound="-1" eType="#//Rental" eOpposite="#//Rental/Reservation_CarGroup"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Quality_CarGroup_role_lower"
+        ordered="false" eType="#//CarGroup" eOpposite="#//CarGroup/Quality_CarGroup_role_higher"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Quality_CarGroup_role_higher"
+        ordered="false" eType="#//CarGroup" eOpposite="#//CarGroup/Quality_CarGroup_role_lower"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Car">
+    <eOperations name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Fleet_Branch" ordered="false"
+        lowerBound="1" eType="#//Branch" eOpposite="#//Branch/Fleet_Car"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Classification_CarGroup"
+        ordered="false" lowerBound="1" eType="#//CarGroup" eOpposite="#//CarGroup/Classification_Car"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Assignment_Rental" ordered="false"
+        eType="#//Rental" eOpposite="#//Rental/Assignment_Car"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toMaintenance" ordered="false"
+        upperBound="-1" eType="#//TernaryRelationMaintenance" eOpposite="#//TernaryRelationMaintenance/toCar"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceDepot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toMaintenance" ordered="false"
+        upperBound="-1" eType="#//TernaryRelationMaintenance" eOpposite="#//TernaryRelationMaintenance/toServiceDepot"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Check">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toMaintenance" ordered="false"
+        upperBound="-1" eType="#//TernaryRelationMaintenance" eOpposite="#//TernaryRelationMaintenance/toCheck"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TernaryRelationMaintenance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toServiceDepot" ordered="false"
+        lowerBound="1" eType="#//ServiceDepot" eOpposite="#//ServiceDepot/toMaintenance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toCheck" ordered="false"
+        lowerBound="1" eType="#//Check" eOpposite="#//Check/toMaintenance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toCar" ordered="false"
+        lowerBound="1" eType="#//Car" eOpposite="#//Car/toMaintenance"/>
+  </eClassifiers>
+</ecore:EPackage>

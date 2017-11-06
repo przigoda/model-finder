@@ -1,0 +1,10 @@
+@namespace(uri="CivStat", prefix="CivStat")
+package CivStat;
+
+class Person {
+  !ordered attr boolean[1] civstat_married;
+  !ordered attr boolean[1] gender_female;
+  !ordered ref Person[*]#Marriage_husband Marriage_wife;
+  !ordered ref Person[*]#Marriage_wife Marriage_husband;
+}
+

@@ -1,0 +1,75 @@
+@namespace(uri="CarRental2", prefix="CarRental2")
+package CarRental2;
+
+abstract class Person {
+  op String fullname(String prefix);
+  !ordered attr int[1] firstname;
+  !ordered attr int[1] lastname;
+  !ordered attr int[1] age;
+  !ordered attr boolean[1] isMarried;
+}
+
+class Customer extends Person {
+  !ordered ref Rental[*]#Booking_Customer Booking_Rental;
+  !ordered attr int[1] address;
+}
+
+class Employee extends Person {
+  op int raiseSalary(int amount);
+  !ordered attr int[1] salary;
+  !ordered ref Branch#Management_Employee_role_manager Management_Branch_role_managedBranch;
+  !ordered ref Branch[1]#Employment_Employee_role_employee Employment_Branch_role_employer;
+}
+
+class Branch {
+  op void rentalsForDate();
+  !ordered ref Employee[1]#Management_Branch_role_managedBranch Management_Employee_role_manager;
+  !ordered ref Employee[*]#Employment_Branch_role_employer Employment_Employee_role_employee;
+  !ordered ref Car[*]#Fleet_Branch Fleet_Car;
+  !ordered ref CarGroup[*]#Offers_Branch Offers_CarGroup;
+  !ordered ref Rental[*]#Provider_Branch Provider_Rental;
+  !ordered attr int location;
+}
+
+class Rental {
+  !ordered attr int[1] fromDate;
+  !ordered attr int[1] untilDate;
+  !ordered ref Customer[1]#Booking_Rental Booking_Customer;
+  !ordered ref Branch[1]#Provider_Rental Provider_Branch;
+  !ordered ref CarGroup[1]#Reservation_Rental Reservation_CarGroup;
+  !ordered ref Car#Assignment_Rental Assignment_Car;
+}
+
+class CarGroup {
+  !ordered attr int[1] kind;
+  !ordered ref Branch[*]#Offers_CarGroup Offers_Branch;
+  !ordered ref Car[*]#Classification_CarGroup Classification_Car;
+  !ordered ref Rental[*]#Reservation_CarGroup Reservation_Rental;
+  !ordered ref CarGroup#Quality_CarGroup_role_higher Quality_CarGroup_role_lower;
+  !ordered ref CarGroup#Quality_CarGroup_role_lower Quality_CarGroup_role_higher;
+}
+
+class Car {
+  op String description();
+  !ordered attr int[1] ~id;
+  !ordered ref Branch[1]#Fleet_Car Fleet_Branch;
+  !ordered ref CarGroup[1]#Classification_Car Classification_CarGroup;
+  !ordered ref Rental#Assignment_Car Assignment_Rental;
+  !ordered ref TernaryRelationMaintenance[*]#toCar toMaintenance;
+}
+
+class ServiceDepot {
+  !ordered attr int[1] location;
+  !ordered ref TernaryRelationMaintenance[*]#toServiceDepot toMaintenance;
+}
+
+class Check {
+  !ordered attr int[1] description;
+  !ordered ref TernaryRelationMaintenance[*]#toCheck toMaintenance;
+}
+
+class TernaryRelationMaintenance {
+  !ordered ref ServiceDepot[1]#toMaintenance toServiceDepot;
+  !ordered ref Check[1]#toMaintenance toCheck;
+  !ordered ref Car[1]#toMaintenance toCar;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="TrafficPP" nsURI="TrafficPP" nsPrefix="TrafficPP">
+  <eClassifiers xsi:type="ecore:EClass" name="Button">
+    <eOperations name="requesting"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasButton_light" lowerBound="1"
+        eType="#//TrafficLight" eOpposite="#//TrafficLight/HasButton_button"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrafficLight">
+    <eOperations name="switchPedLight"/>
+    <eOperations name="switchCarLight"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pedLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="carLight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="request" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasButton_button" lowerBound="1"
+        eType="#//Button" eOpposite="#//Button/HasButton_light"/>
+  </eClassifiers>
+</ecore:EPackage>

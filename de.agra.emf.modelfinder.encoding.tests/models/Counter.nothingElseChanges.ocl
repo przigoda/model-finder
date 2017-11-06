@@ -1,0 +1,18 @@
+import Counter : 'Counter.ecore#/'
+
+package Counter
+
+context Counter::count():
+    post countpost1: self.value = 1 + self.value@pre
+
+context Counter::count2():
+    post countpost1: self.value = 2 + self.value@pre
+
+context Counter::count3():
+    post countpost1: self.value = 3 + self.value@pre
+
+context Counter
+    inv bound1: self.value < 32
+    inv bound2: self.value >= 0
+
+endpackage

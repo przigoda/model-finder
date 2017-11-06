@@ -1,0 +1,62 @@
+import CarRental2 : 'CarRental2.ecore#/'
+
+package CarRental2
+
+context Person
+  inv Person1: age > 0
+      -- The age attribute of persons is greater than zero
+--  inv Person2: firstname.oclIsUndefined() and lastname.oclIsUndefined()
+--       both names must be defined
+  inv Person3: 0 < age and age < 150
+  inv Person3: age > 200
+      -- the age must be in a reasonable range
+
+--context Employee
+--  inv Employee1:     Employment_employer->isEmpty
+--                 xor managedBranch->isEmpty
+      -- each employee is either a manager or a clerk of a branch
+
+context Branch 
+  inv Branch1: self.Employment_employee->includes(self.management_manager)
+      -- Each manager is also an employee of the same branch
+  inv Branch2: self.Employment_employee->forAll(e | e <> self.management_manager implies self.management_manager.salary > e.salary)
+-- Managers get a higher salary than employees
+
+context CarGroup 
+  inv CarGroup1: Quality_higher<> self and Quality_lower<> self
+      -- The order on CarGroups is not reflexive
+  inv CarGroup2: Quality_higher.Quality_higher<> self and Quality_lower.Quality_lower<> self
+      -- The order on CarGroups is anti-symmetric
+      -- The order on CarGroups is strictly monotonic, i.e. there are no cycles
+
+--context Car
+--  inv Car1: Assignment_rental->isEmpty() or serviceDepot->isEmpty()
+    -- A car may not be assigned to a maintenance and 
+    -- to a rental at the same time
+
+--  inv Car2: serviceDepot->size() <= 1
+    -- A maintenance is done in only one service depot 
+    -- (this cannot be expressed with multiplicities 
+    -- on ternary associations)
+
+context Rental
+  -- Only a car of the requested car group or a higher
+  -- (better) one may be assigned to a rental
+   inv:         (not self.Assignment_car.oclIsUndefined())
+        implies (    Reservation_carGroup.Classification_car->includes(Assignment_car)
+--                  or Assignment_car.Reservation_carGroup.isBetterThan(Reservation_carGroup)
+                  )
+--  inv Rental2: self.Provider_branch.Offers_carGroup->includes(self.Reservation_carGroup)
+-- ###### -- > die obige Invariante macht Probleme!
+-- A reserved car group must be offered by the 
+-- branch providing the reservation
+
+
+--context Employee::raiseSalary(Int amount): Int
+--  -- If the amount is positive, raise the salary 
+--  -- by the given amount
+--  pre:  amount > 0
+--  post:     self.salary = self.salary@pre + amount
+--        and result = self.salary
+
+endpackage

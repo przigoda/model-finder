@@ -1,0 +1,10 @@
+import Basic : 'Basic.ecore#/'
+
+package Basic
+
+context C
+  inv a25: 2 <= a and a <= 5
+  inv b78: 7 <= b and b <= 8
+  inv a34_b69: 3 <= a and a <= 4 and 6 <= b and b <= 9
+
+endpackage

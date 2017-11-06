@@ -1,0 +1,34 @@
+import Demo : 'Demo.ecore#/'
+
+package Demo
+
+context Department 
+  -- the number of employees working in a department must be greater
+  -- or equal to the number of projects controlled by the department
+  inv MoreEmployeesThanProjects:
+    self.WorksIn_employee->size() >= self.Controls_project->size()
+
+context Employee 
+  -- employees get a higher salary when they work on more projects
+  inv MoreProjectsHigherSalary1: not
+    Employee.allInstances()->forAll(e1 |
+      Employee.allInstances()->forAll(e2 |
+        (e1.WorksOn_project->size() > e2.WorksOn_project->size())
+          implies (e1.salary > e2.salary) ))
+-- warum nicht einfach ?
+--  inv MoreProjectsHigherSalary2:
+--    Employee.allInstances()->forAll(e1 |
+--      (self.WorksOn_project->size() > e1.WorksOn_project->size())
+--          implies (self.salary > e1.salary) )
+
+context Project
+  -- the budget of a project must not exceed the 
+  -- budget of the controlling department
+  inv BudgetWithinDepartmentBudget:
+    self.budget <= self.Controls_department.budget
+  -- employees working on a project must also work in the
+  -- controlling department
+  inv EmployeesInControllingDepartment:
+    self.Controls_department.WorksIn_employee->includesAll( self.WorksOn_employee )
+
+endpackage

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SMT-LIB2 meta model
+Bundle-SymbolicName: de.agra.emf.metamodels.SMTlib2extended;singleton:=true
+Bundle-Version: 0.0.1
+Bundle-ClassPath: .,
+ com.microsoft.z3.jar
+Bundle-Vendor: AGRA
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.agra.emf.metamodels.SMTlib2extended,
+ de.agra.emf.metamodels.SMTlib2extended.conversion,
+ de.agra.emf.metamodels.SMTlib2extended.impl,
+ de.agra.emf.metamodels.SMTlib2extended.solver,
+ de.agra.emf.metamodels.SMTlib2extended.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.mwe2.launch;bundle-version="2.3.0",
+ org.eclipse.emf.mwe2.lib;bundle-version="2.3.0",
+ org.eclipse.jdt.core;bundle-version="3.8.1",
+ org.eclipse.xtend.typesystem.emf;bundle-version="1.2.0",
+ org.eclipse.xpand;bundle-version="1.2.0",
+ org.eclipse.xtend;bundle-version="1.2.0",
+ org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.junit,
+ de.agra.emf.modelfinder.utils;bundle-version="0.0.1"
+

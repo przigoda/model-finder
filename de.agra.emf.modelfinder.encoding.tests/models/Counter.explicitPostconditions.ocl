@@ -1,0 +1,39 @@
+import Counter : 'Counter.ecore#/'
+
+package Counter
+
+context Counter::count():
+    post countPost1: value = 1 + value@pre
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+    post countPost2: Counter.allInstances()->forAll( c |
+        c.constant = c.constant@pre
+    )
+    post countPost3: Counter.allInstances()->forAll( c |
+        (self <> c) implies (c.value = c.value@pre)
+    )
+
+context Counter::count2():
+    post countPost1: (self.value = 2 + self.value@pre)
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+    post countPost2: Counter.allInstances()->forAll( c |
+        c.constant = c.constant@pre
+    )
+    post countPost3: Counter.allInstances()->forAll( c |
+        (self <> c) implies (c.value = c.value@pre)
+    )
+
+context Counter::count3():
+    post countPost1: self.value = 3 + self.value@pre
+--    post : (Counter.allInstances@pre()) = (Counter.allInstances())
+    post countPost2: Counter.allInstances()->forAll( c |
+        c.constant = c.constant@pre
+    )
+    post countPost3: Counter.allInstances()->forAll( c |
+        (self <> c) implies (c.value = c.value@pre)
+    )
+
+context Counter
+    inv bound1: self.value >= 0
+    inv bound2: self.value < 64
+
+endpackage

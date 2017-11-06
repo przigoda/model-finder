@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="TurnIndicator" nsURI="TurnIndicator" nsPrefix="TurnIndicator">
+  <eClassifiers xsi:type="ecore:EClass" name="Flash_Ctrl">
+    <eOperations name="setTil">
+      <eParameters name="l" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    </eOperations>
+    <eOperations name="switchEmerMode"/>
+    <eOperations name="manageFlashing"/>
+    <eOperations name="manageEmerMode"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tilOld" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tilLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emerSwitch" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasOutput_output" lowerBound="1"
+        eType="#//Output_Ctrl" eOpposite="#//Output_Ctrl/HasOutput_flash"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Output_Ctrl">
+    <eOperations name="FlashOn"/>
+    <eOperations name="FlashOff"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ctr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lOld" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rOld" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="right" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lampsLeft" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lampsRight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="HasOutput_flash" lowerBound="1"
+        eType="#//Flash_Ctrl" eOpposite="#//Flash_Ctrl/HasOutput_output"/>
+  </eClassifiers>
+</ecore:EPackage>

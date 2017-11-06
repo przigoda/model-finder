@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ModelFinder Application Invariant Independence (Test)
+Bundle-SymbolicName: de.agra.emf.modelfinder.applications.invariantindependence.test
+Bundle-Version: 0.0.1
+Bundle-Vendor: AGRA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit;bundle-version="4.11.0",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ de.agra.emf.modelfinder.applications.invariantindependence;bundle-version="0.0.1",
+ org.eclipse.emf.ecore;bundle-version="2.9.1",
+ org.eclipse.ocl;bundle-version="3.3.0",
+ org.eclipse.ocl.ecore;bundle-version="3.3.0",
+ de.agra.emf.metamodels.SMTlib2extended;bundle-version="1.0.0",
+ de.agra.emf.modelfinder.modelloader;bundle-version="0.0.1",
+ org.eclipse.core.runtime;bundle-version="3.9.0",
+ de.agra.emf.modelfinder.statesequence;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.encoding;bundle-version="0.0.1",
+ de.agra.emf.modelfinder.utils;bundle-version="0.0.1"
+

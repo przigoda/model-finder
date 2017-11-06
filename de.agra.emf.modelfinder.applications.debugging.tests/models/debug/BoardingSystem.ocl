@@ -1,0 +1,27 @@
+import BoardingSystem : 'BoardingSystem.ecore#/'
+
+package BoardingSystem
+
+context PassengerID
+  inv i1: (passedSecurity = true) implies (not checkedIn.oclIsUndefined())
+  inv i2: (passportChecked = true) implies (passedSecurity = true and (not checkedIn.oclIsUndefined()))
+  inv i3: checkedIn = belongsTo_flight or (not checkedIn.oclIsUndefined())
+
+context Flight
+  inv i4: checkedIn <= capacity
+
+
+context PassengerID::checkIn(f: Flight):
+  pre: f.checkedIn < f.capacity
+  post: checkedIn = f
+  post: f.checkedIn = f.checkedIn@pre + 1
+
+context PassengerID::passSecurity(f: Flight):
+  pre: checkedIn = f
+  post: (f.international) implies (passportChecked = true)
+  post: passedSecurity = true
+
+context PassengerID::boardFlight(f: Flight):
+  pre: checkedIn = f
+  pre: passedSecurity = true
+endpackage

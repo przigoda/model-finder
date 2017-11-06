@@ -1,0 +1,86 @@
+import Traffic : 'Traffic.ecore#/'
+
+package Traffic
+
+context TrafficLight
+  inv i1: (not direction.oclIsUndefined())
+  inv i2: not( HasPedLight_pedestrianLight.greenLight = true and HasCarLight_carLight = true )
+  inv i3: HasCarLight_carLight.greenLight = true
+          implies TrafficLight.allInstances()->forAll( tl | tl.direction <> self.direction implies tl.HasPedLight_pedestrianLight.greenLight = false )
+
+context PedestrianLight
+  inv i1: not( redLight = true and greenLight = true )
+  inv i2: (not redLight.oclIsUndefined()) and (not greenLight.oclIsUndefined())
+
+context CarLight
+  inv i1: not( redLight = true and greenLight = true )
+  inv i2: (not redLight.oclIsUndefined()) and (not yellowLight.oclIsUndefined()) and (not greenLight.oclIsUndefined())
+
+context PedestrianLight::switch():
+  pre p1: redLight = true or greenLight = true
+  post po1: redLight@pre = true implies redLight = false
+  post po2: redLight@pre = true implies greenLight = true
+  post po3: redLight@pre = false implies redLight = true
+  post po4: redLight@pre = false implies greenLight = false
+  post po5: CarLight.allInstances()->forAll( cl | cl.redLight = cl.redLight@pre )
+  post po6: CarLight.allInstances()->forAll( cl | cl.yellowLight = cl.yellowLight@pre )
+  post po7: CarLight.allInstances()->forAll( cl | cl.greenLight = cl.greenLight@pre )
+--  post po8: PedestrianLight.allInstances()->forAll( pl | pl <> self implies pl.redLight = pl.redLight@pre )
+--  post po9: PedestrianLight.allInstances()->forAll( pl | pl <> self implies pl.greenLight = pl.greenLight@pre )
+  post po10: TrafficLight.allInstances()->forAll( tl | tl.direction = tl.direction@pre )
+
+
+context CarLight::switchRedToRedYellow():
+  pre p1: redLight = true
+  pre p2: yellowLight = false
+  pre p3: greenLight = false
+  post po1: redLight = true
+  post po2: yellowLight = true
+  post po3: greenLight = false
+--  post po4: CarLight.allInstances()->forAll( cl | cl <> self implies cl.redLight = cl.redLight@pre )
+--  post po5: CarLight.allInstances()->forAll( cl | cl <> self implies cl.yellowLight = cl.yellowLight@pre )
+--  post po6: CarLight.allInstances()->forAll( cl | cl <> self implies cl.greenLight = cl.greenLight@pre )
+  post po7: PedestrianLight.allInstances()->forAll( pl | pl.redLight = pl.redLight@pre )
+  post po8: PedestrianLight.allInstances()->forAll( pl | pl.greenLight = pl.greenLight@pre )  
+  post po9: TrafficLight.allInstances()->forAll( tl | tl.direction = tl.direction@pre )
+context CarLight::switchRedYellowToGreen():
+  pre p1: redLight = true
+  pre p2: yellowLight = true
+  pre p3: greenLight = false
+  post po1: redLight = false
+  post po2: yellowLight = false
+  post po3: greenLight = true
+--  post po4: CarLight.allInstances()->forAll( cl | cl <> self implies cl.redLight = cl.redLight@pre )
+--  post po5: CarLight.allInstances()->forAll( cl | cl <> self implies cl.yellowLight = cl.yellowLight@pre )
+--  post po6: CarLight.allInstances()->forAll( cl | cl <> self implies cl.greenLight = cl.greenLight@pre )
+  post po7: PedestrianLight.allInstances()->forAll( pl | pl.redLight = pl.redLight@pre )
+  post po8: PedestrianLight.allInstances()->forAll( pl | pl.greenLight = pl.greenLight@pre )  
+  post po9: TrafficLight.allInstances()->forAll( tl | tl.direction = tl.direction@pre )
+context CarLight::switchGreenToYellow():
+  pre p1: redLight = false
+  pre p2: yellowLight = false
+  pre p3: greenLight = true
+  post po1: redLight = false
+  post po2: yellowLight = true
+  post po3: greenLight = false
+--  post po4: CarLight.allInstances()->forAll( cl | cl <> self implies cl.redLight = cl.redLight@pre )
+--  post po5: CarLight.allInstances()->forAll( cl | cl <> self implies cl.yellowLight = cl.yellowLight@pre )
+--  post po6: CarLight.allInstances()->forAll( cl | cl <> self implies cl.greenLight = cl.greenLight@pre )
+  post po7: PedestrianLight.allInstances()->forAll( pl | pl.redLight = pl.redLight@pre )
+  post po8: PedestrianLight.allInstances()->forAll( pl | pl.greenLight = pl.greenLight@pre )  
+  post po9: TrafficLight.allInstances()->forAll( tl | tl.direction = tl.direction@pre )
+context CarLight::switchYellowToRed():
+  pre p1: redLight = false
+  pre p2: yellowLight = true
+  pre p3: greenLight = false
+  post po1: redLight = true
+  post po2: yellowLight = false
+  post po3: greenLight = false
+--  post po4: CarLight.allInstances()->forAll( cl | cl <> self implies cl.redLight = cl.redLight@pre )
+--  post po5: CarLight.allInstances()->forAll( cl | cl <> self implies cl.yellowLight = cl.yellowLight@pre )
+--  post po6: CarLight.allInstances()->forAll( cl | cl <> self implies cl.greenLight = cl.greenLight@pre )
+  post po7: PedestrianLight.allInstances()->forAll( pl | pl.redLight = pl.redLight@pre )
+  post po8: PedestrianLight.allInstances()->forAll( pl | pl.greenLight = pl.greenLight@pre )
+  post po9: TrafficLight.allInstances()->forAll( tl | tl.direction = tl.direction@pre )
+
+endpackage

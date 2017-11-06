@@ -1,0 +1,26 @@
+@namespace(uri="PersonCompany", prefix="PersonCompany")
+package PersonCompany;
+
+class Person {
+  !ordered op Company[*] employer();
+  !ordered attr String[1] name;
+  !ordered ref Job[*]#PersonJob_Person_role_employee PersonJob_Job_role_job;
+}
+
+class Company {
+  !ordered op Person[*] employee();
+  !ordered attr String[1] name;
+  !ordered ref Job[*]#CompanyJob_Company_role_employer CompanyJob_Job_role_job;
+}
+
+class Job {
+  !ordered op Job[*] bossPlus();
+  !ordered op Job[*] workerPlus();
+  !ordered op Job[*] workerPlusOnSet(!ordered Job[*] s);
+  !ordered attr int[1] salary;
+  !ordered ref Person[1]#PersonJob_Job_role_job PersonJob_Person_role_employee;
+  !ordered ref Company[1]#CompanyJob_Job_role_job CompanyJob_Company_role_employer;
+  !ordered ref Job[*]#BossWorker_Job_role_boss BossWorker_Job_role_worker;
+  !ordered ref Job#BossWorker_Job_role_worker BossWorker_Job_role_boss;
+}
+

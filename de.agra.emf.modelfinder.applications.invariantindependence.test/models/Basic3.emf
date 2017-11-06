@@ -1,0 +1,9 @@
+@namespace(uri="Basic3", prefix="Basic3")
+package Basic3;
+
+class C {
+    !ordered attr boolean[1] a;
+    !ordered attr boolean[1] b;
+    !ordered attr boolean[1] c;
+    !ordered attr boolean[1] d;
+}

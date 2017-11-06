@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="BoardingSystem" nsURI="BoardingSystem" nsPrefix="BoardingSystem">
+  <eClassifiers xsi:type="ecore:EClass" name="Flight">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkedIn" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="international" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo_ticket" upperBound="-1"
+        eType="#//PassengerID" eOpposite="#//PassengerID/belongsTo_flight"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PassengerID">
+    <eOperations name="checkIn">
+      <eParameters name="f" eType="#//Flight"/>
+    </eOperations>
+    <eOperations name="passSecurity">
+      <eParameters name="f" eType="#//Flight"/>
+    </eOperations>
+    <eOperations name="boardFlight">
+      <eParameters name="f" eType="#//Flight"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="checkedIn" lowerBound="1"
+        eType="#//Flight"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="passedSecurity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="passportChecked" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo_flight" upperBound="-1"
+        eType="#//Flight" eOpposite="#//Flight/belongsTo_ticket"/>
+  </eClassifiers>
+</ecore:EPackage>

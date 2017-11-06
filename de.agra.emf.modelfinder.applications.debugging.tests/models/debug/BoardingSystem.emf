@@ -1,0 +1,23 @@
+@namespace(uri="BoardingSystem", prefix="BoardingSystem")
+package BoardingSystem;
+
+class Flight {
+    attr int capacity;
+    attr int checkedIn;
+    attr Boolean international;
+
+    ref PassengerID[*]#belongsTo_flight belongsTo_ticket;
+}
+
+class PassengerID {
+    ref Flight[1] checkedIn;
+
+    attr Boolean passedSecurity;
+    attr Boolean passportChecked;
+
+    op void checkIn(Flight f);
+    op void passSecurity(Flight f);
+    op void boardFlight(Flight f);
+
+    ref Flight[*]#belongsTo_ticket belongsTo_flight;
+}

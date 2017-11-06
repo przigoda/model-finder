@@ -1,0 +1,62 @@
+@namespace(uri="CPU", prefix="CPU")
+package CPU;
+
+enum Operation {
+  noop = 0;
+  jump = 1;
+  bez = 2;
+  addition = 3;
+}
+
+enum RegisterType {
+  general = 0;
+  pc = 1;
+  zero = 2;
+  overflow = 3;
+}
+
+class CPU {
+  !ordered ref ProgramCounter[1]#HasProgramCounter_CPU_role_cpu HasProgramCounter_ProgramCounter_role_programcounter;
+  !ordered ref Memory[1]#HasMemory_CPU_role_cpu HasMemory_Memory;
+  !ordered ref Register[+]#HasRegister_CPU_role_cpu HasRegister_Register;
+  !ordered ref ControlUnit[1]#HasControlUnit_CPU_role_cpu HasControlUnit_ControlUnit;
+  !ordered ref ALU[1]#HasALU_CPU_role_cpu HasALU_ALU_role_alu;
+}
+
+class ProgramCounter {
+  op void increment();
+  op void jump();
+  !ordered attr int[1] pc;
+  !ordered attr boolean[1] enable;
+  !ordered attr int[1] jump;
+  !ordered ref CPU[1]#HasProgramCounter_ProgramCounter_role_programcounter HasProgramCounter_CPU_role_cpu;
+}
+
+class ALU {
+  !ordered attr boolean[1] zeroFlag;
+  !ordered attr Operation[1] operation;
+  !ordered ref CPU[1]#HasALU_ALU_role_alu HasALU_CPU_role_cpu;
+}
+
+class ControlUnit {
+  op void jump();
+  op void bez();
+  op void add();
+  !ordered attr Operation[1] operation;
+  !ordered attr int[1] constant;
+  !ordered ref CPU[1]#HasControlUnit_ControlUnit HasControlUnit_CPU_role_cpu;
+  !ordered ref Register[0..2]#HasOperands_ControlUnit HasOperands_Register_role_register;
+}
+
+class Memory {
+  !ordered attr int[1] entries;
+  !ordered ref CPU[1]#HasMemory_Memory HasMemory_CPU_role_cpu;
+}
+
+class Register {
+  !ordered attr RegisterType[1] type;
+  !ordered attr int[1] value;
+  !ordered ref CPU[1]#HasRegister_Register HasRegister_CPU_role_cpu;
+  !ordered ref ControlUnit#HasOperands_Register_role_register HasOperands_ControlUnit;
+}
+

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modelfinder Resourcesequence
+Bundle-SymbolicName: de.agra.emf.modelfinder.statesequence
+Bundle-Version: 0.0.1
+Bundle-Vendor: AGRA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore;bundle-version="2.9.1",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.0",
+ org.eclipse.emf.ecore.xmi.source;bundle-version="2.10.0"
+Export-Package: de.agra.emf.modelfinder.statesequence,
+ de.agra.emf.modelfinder.statesequence.bounds;uses:="org.eclipse.emf.ecore",
+ de.agra.emf.modelfinder.statesequence.determination,
+ de.agra.emf.modelfinder.statesequence.state,
+ de.agra.emf.modelfinder.statesequence.utils
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="de.agra.SMTlib2extended"
+            class="de.agra.emf.metamodels.SMTlib2extended.SMTlib2extendedPackage"
+            genModel="src/model/SMTlib2extended.genmodel"/>
+   </extension>
+
+null
+</plugin>

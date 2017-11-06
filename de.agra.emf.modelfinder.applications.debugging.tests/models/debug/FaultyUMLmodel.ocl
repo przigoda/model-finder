@@ -1,0 +1,15 @@
+import FaultyUMLmodel : 'FaultyUMLmodel.ecore#/'
+
+package FaultyUMLmodel
+
+context A inv i1: self.v <= 10 implies self.w
+
+--context B inv i2: as->one(a|a.w=0)
+--context B inv i3: x.isDefined()
+--context B inv i4: cs->exists(c|c.u.isDefind())
+
+--context C inv i5: A.allInstances().forAll(a|a.v=8)
+
+--context D inv i6: cs->forAll(c|c.u < 10)
+
+endpackage

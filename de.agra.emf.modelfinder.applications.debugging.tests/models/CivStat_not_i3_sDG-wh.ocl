@@ -1,0 +1,34 @@
+import CivStat : 'CivStat.ecore#/'
+
+package CivStat
+
+context Person
+  inv aMOW: Marriage_wife->size() <= 1
+  inv aMOH: Marriage_husband->size() <= 1
+
+--  inv hFF:  (not Marriage_husband->oclIsUndefined()) implies gender_female
+--  inv hFF:  (not Marriage_husband->isEmpty()) implies gender_female
+  inv nothFF: Person.allInstances()->exists( p |
+                    (not p.Marriage_husband->oclIsUndefined())
+                and (not p.gender_female)
+              )
+
+  inv wFM:  (not Marriage_wife->oclIsUndefined()) implies (not gender_female)
+--  inv wFM:  (not Marriage_wife->isEmpty()) implies (not gender_female)
+
+
+
+
+
+  inv cEM:    civstat_married
+            = (   ( Marriage_wife->notEmpty() )
+               or ( Marriage_husband->notEmpty() ) )
+  inv sDG:  if   Marriage_wife->size() = 1
+            then self.gender_female->asBag() <> Marriage_wife.gender_female
+            else if   Marriage_husband->size() = 1
+                 then self.gender_female->asBag() <> Marriage_husband.gender_female
+                 else true
+                 endif
+            endif
+
+endpackage

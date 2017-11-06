@@ -1,0 +1,125 @@
+model TurnIndicator
+
+--enum Level { left, right, center }
+-- left = 0, center = 1, right = 2
+
+class Flash_Ctrl
+attributes
+  tilOld: Integer
+  tilLevel: Integer
+  emerSwitch: Boolean
+operations
+  setTil(l: Integer)
+  switchEmerMode()
+  manageFlashing()
+  manageEmerMode()
+constraints
+  inv i1: tilLevel >= 0 and tilLevel <= 2
+  inv i2: tilOld >= 0 and tilOld <= 2
+  inv i3: tilOld.isDefined() and tilLevel.isDefined() and emerSwitch.isDefined()
+end
+
+class Output_Ctrl
+attributes
+  ctr: Integer
+  lOld: Boolean
+  rOld: Boolean
+  left: Boolean
+  right: Boolean
+  lampsLeft: Boolean
+  lampsRight: Boolean
+operations
+  FlashOn()
+  FlashOff()
+constraints
+  inv i4: ctr.isDefined() and lOld.isDefined() and rOld.isDefined() and left.isDefined() and right.isDefined() and lampsLeft.isDefined() and lampsRight.isDefined()
+end
+
+association HasOutput between
+  Flash_Ctrl[1] role flash
+  Output_Ctrl[1] role output
+end
+
+constraints
+
+context Flash_Ctrl::setTil(l: Integer)
+  post: tilLevel = l
+  post: tilOld = tilOld@pre
+  post: emerSwitch = emerSwitch@pre
+  post: output.ctr = output.ctr@pre
+  post: output.lOld = output.lOld@pre
+  post: output.rOld = output.rOld@pre
+  post: output.left = output.left@pre
+  post: output.right = output.right@pre
+  post: output.lampsLeft = output.lampsLeft@pre
+  post: output.lampsRight = output.lampsRight@pre
+  
+context Flash_Ctrl::switchEmerMode()
+  post: not(emerSwitch = emerSwitch@pre)
+  post: tilLevel = tilLevel@pre
+  post: tilOld = tilOld@pre
+  post: output.ctr = output.ctr@pre
+  post: output.lOld = output.lOld@pre
+  post: output.rOld = output.rOld@pre
+  post: output.left = output.left@pre
+  post: output.right = output.right@pre
+  post: output.lampsLeft = output.lampsLeft@pre
+  post: output.lampsRight = output.lampsRight@pre
+  
+context Flash_Ctrl::manageFlashing()
+  pre: emerSwitch = false
+  post: (tilLevel = 0) implies (output.left = true and output.right = false)
+  post: (tilLevel = 2) implies (output.right = true and output.left = false)
+  post: (tilLevel = 1) implies (output.left = false and output.right = false)
+  post: (output.left = true and output.left@pre = false) implies (output.ctr = 0)
+  post: (output.right = true and output.right@pre = false) implies (output.ctr = 0)
+  post: ((output.left = false or output.left@pre = true) and (output.right = false or output.right@pre = true)) implies (output.ctr = output.ctr@pre)
+  post: emerSwitch = emerSwitch@pre
+  post: tilOld = tilLevel@pre
+  post: tilLevel = tilLevel@pre
+  post: output.lOld = output.lOld@pre
+  post: output.rOld = output.rOld@pre
+  post: output.lampsLeft = output.lampsLeft@pre
+  post: output.lampsRight = output.lampsRight@pre
+
+context Flash_Ctrl::manageEmerMode()
+  pre: emerSwitch = true
+  post: output.ctr = 3
+  post: (tilOld@pre = 1 and (tilLevel@pre = 2 or tilLevel@pre = 0) and tilLevel = 2) implies (output.right = true)
+  post: (tilOld@pre = 1 and (tilLevel@pre = 2 or tilLevel@pre = 0) and tilLevel = 0) implies (output.left = true)
+  post: (not(tilOld@pre = 1) or tilLevel@pre = 1) implies (output.left = true and output.right = true)
+  post: tilOld = 1
+  post: tilLevel = tilLevel@pre
+  post: output.lOld = output.lOld@pre
+  post: output.rOld = output.rOld@pre
+  post: output.lampsLeft = output.lampsLeft@pre
+  post: output.lampsRight = output.lampsRight@pre
+  post: emerSwitch = emerSwitch@pre  
+  
+context Output_Ctrl::FlashOn()
+  pre: left = true or right = true or (ctr >= 1 and ctr < 3)
+  pre: lampsLeft = false and lampsRight = false
+  post: (left@pre = true or lOld@pre = true) implies lampsLeft = true
+  post: (right@pre = true or rOld@pre = true) implies lampsRight = true
+--  post: (left@pre = false or lOld@pre = false or right@pre = false or rOld@pre = false) implies (lampsLeft = false and lampsRight = false)
+  post: (ctr@pre < 3) implies (ctr = ctr@pre + 1)
+  post: (ctr@pre >= 3) implies (ctr = ctr@pre)
+  post: left = left@pre
+  post: right = right@pre
+  post: flash.emerSwitch = flash.emerSwitch@pre
+  post: flash.tilOld = flash.tilOld@pre
+  post: flash.tilLevel = flash.tilLevel@pre
+  post: lOld = lOld@pre
+  post: rOld = rOld@pre
+  
+context Output_Ctrl::FlashOff()
+  pre: lampsLeft = true or lampsRight = true
+  post: lampsLeft = false and lampsRight = false
+  post: (ctr@pre >= 3) implies (lOld = false and rOld = false)
+  post: (ctr@pre < 3) implies (lOld = lOld@pre and rOld = rOld@pre)
+  post: left = left@pre
+  post: right = right@pre
+  post: ctr = ctr@pre
+  post: flash.emerSwitch = flash.emerSwitch@pre
+  post: flash.tilOld = flash.tilOld@pre
+  post: flash.tilLevel = flash.tilLevel@pre

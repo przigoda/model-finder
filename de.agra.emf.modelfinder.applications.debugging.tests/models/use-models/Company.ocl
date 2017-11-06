@@ -1,0 +1,30 @@
+import Company : 'Company.ecore#/'
+
+package Company
+
+--context Department inv tmp : WorksIn_Employee->size() > 1
+
+--context Employee inv foo: Department.allInstances()->forAll( d | d.WorksIn_Employee->size() > 1 )
+
+context Department 
+  inv i1a: self.budget >= 0
+  inv i2:  self.WorksIn_Employee->size() >= self.Controls_Project->size()
+--  inv tmp: self.budget.WorksIn_Employee.
+
+context Employee 
+  inv i1b: self.salary >= 4
+  inv i1b: self.salary = 2
+--  inv i3a:  Employee.allInstances()->forAll(e1 , e2 | 
+--                   e1.WorksOn_Project->size() > e2.WorksOn_Project->size() implies e1.salary > e2.salary)
+-- forAll does currently not support 2 running variables such that the invariant must be rewritten like:
+--  inv i3b:  Employee.allInstances()->forAll(e1 | 
+--            Employee.allInstances()->forAll(e2 |
+--                 e1.WorksOn_Project->size() > e2.WorksOn_Project->size() implies e1.salary > e2.salary))
+
+context Project 
+  inv i1c: self.budget >= 0
+  inv i4:  self.budget <= self.Controls_Department.budget
+--  inv i5:  self.Controls_Department.WorksIn_Employee->includesAll(self.WorksOn_Employee)
+
+
+endpackage

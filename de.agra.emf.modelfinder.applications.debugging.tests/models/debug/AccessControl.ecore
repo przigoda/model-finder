@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="AccessControl" nsURI="AccessControl" nsPrefix="AccessControl">
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eOperations name="pass">
+      <eParameters name="b" eType="#//Building"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorization_building"
+        lowerBound="1" upperBound="-1" eType="#//Building" eOpposite="#//Building/authorization_accessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="situation_place" lowerBound="1"
+        eType="#//Building" eOpposite="#//Building/situation_person"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Building">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="authorization_accessor"
+        upperBound="-1" eType="#//Person" eOpposite="#//Person/authorization_building"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="situation_person" upperBound="-1"
+        eType="#//Person" eOpposite="#//Person/situation_place"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RPerson">
+    <eOperations name="pass">
+      <eParameters name="b" eType="#//RBuilding"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rauthorization_rbuilding"
+        lowerBound="1" upperBound="-1" eType="#//RBuilding" eOpposite="#//RBuilding/rauthorization_raccessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rsituation_rplace" lowerBound="1"
+        eType="#//RBuilding" eOpposite="#//RBuilding/rsituation_rperson"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RBuilding">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rauthorization_raccessor"
+        upperBound="-1" eType="#//RPerson" eOpposite="#//RPerson/rauthorization_rbuilding"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rsituation_rperson" upperBound="-1"
+        eType="#//RPerson" eOpposite="#//RPerson/rsituation_rplace"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communication_exit" lowerBound="1"
+        eType="#//RBuilding" eOpposite="#//RBuilding/communication_entry"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communication_entry" upperBound="-1"
+        eType="#//RBuilding" eOpposite="#//RBuilding/communication_exit"/>
+  </eClassifiers>
+</ecore:EPackage>

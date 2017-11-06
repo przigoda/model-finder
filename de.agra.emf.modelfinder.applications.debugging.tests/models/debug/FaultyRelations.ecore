@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="FaultyRelations" nsURI="FaultyRelations" nsPrefix="FaultyRelations">
+  <eClassifiers xsi:type="ecore:EClass" name="A">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="v" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AB" ordered="false" lowerBound="5"
+        upperBound="5" eType="#//B" eOpposite="#//B/BA"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AC" ordered="false" lowerBound="1"
+        eType="#//C" eOpposite="#//C/CA"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="B">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BA" ordered="false" lowerBound="2"
+        upperBound="2" eType="#//A" eOpposite="#//A/AB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BC" ordered="false" lowerBound="3"
+        upperBound="3" eType="#//C" eOpposite="#//C/CB"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="C">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="u" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CA" ordered="false" lowerBound="2"
+        upperBound="2" eType="#//A" eOpposite="#//A/AC"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CB" ordered="false" lowerBound="5"
+        upperBound="5" eType="#//B" eOpposite="#//B/BC"/>
+  </eClassifiers>
+</ecore:EPackage>

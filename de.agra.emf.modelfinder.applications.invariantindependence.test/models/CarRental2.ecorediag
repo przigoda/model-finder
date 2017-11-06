@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_A2ZRQCCkEeSoSYLBudPjwA" type="EcoreTools" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_A2btgCCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2cUkCCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2cUkSCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2c7oCCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Person/firstname"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2c7oSCkEeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_A2c7oiCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Person/lastname"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2c7oyCkEeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_A2disCCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Person/age"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2disSCkEeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_A2disiCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Person/isMarried"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2disyCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2cUkiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2cUkyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2cUlCCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2cUlSCkEeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_A2ditCCkEeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="CarRental2.ecore#//Person/fullname"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2ditSCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2cUliCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2cUlyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2cUmCCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2btgSCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Person"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2btgiCkEeSoSYLBudPjwA" y="333"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2eJwCCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2eJwyCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2eJxCCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2ew0CCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Customer/address"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2ew0SCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2eJxSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2eJxiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2eJxyCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2eJyCCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2eJySCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2eJyiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2eJyyCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2eJwSCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Customer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2eJwiCkEeSoSYLBudPjwA" x="218" y="503"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2ew0iCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2ew1SCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2ew1iCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2fX5CCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Employee/salary"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2fX5SCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2ew1yCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2ew2CCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2ew2SCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2fX4CCkEeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_A2fX5iCkEeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="CarRental2.ecore#//Employee/raiseSalary"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2fX5yCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2fX4SCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2fX4iCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2fX4yCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2ew0yCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Employee"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2ew1CCkEeSoSYLBudPjwA" x="545" y="745"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2fX6CCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2fX6yCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2fX7CCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2f-9CCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Branch/location"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2f-9SCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2fX7SCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2fX7iCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2fX7yCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2f-8CCkEeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_A2f-9iCkEeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="CarRental2.ecore#//Branch/rentalsForDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2f-9yCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2f-8SCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2f-8iCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2f-8yCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2fX6SCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Branch"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2fX6iCkEeSoSYLBudPjwA" x="655" y="515"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2f--CCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2f--yCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2f-_CCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2gmBCCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Rental/fromDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2gmBSCkEeSoSYLBudPjwA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_A2gmBiCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Rental/untilDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2gmByCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2f-_SCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2f-_iCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2f-_yCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2gmACCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2gmASCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2gmAiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2gmAyCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2f--SCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Rental"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2f--iCkEeSoSYLBudPjwA" x="213" y="333"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2gmCCCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2gmCyCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2gmDCCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2hNFCCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//CarGroup/kind"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2hNFSCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2gmDSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2gmDiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2gmDyCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2hNECCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2hNESCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2hNEiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2hNEyCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2gmCSCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//CarGroup"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2gmCiCkEeSoSYLBudPjwA" x="620" y="295"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2hNFiCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2hNGSCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2hNGiCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2h0ICCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Car/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2h0ISCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2hNGyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2hNHCCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2hNHSCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2hNHiCkEeSoSYLBudPjwA" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_A2h0IiCkEeSoSYLBudPjwA" type="2002">
+        <element xmi:type="ecore:EOperation" href="CarRental2.ecore#//Car/description"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2h0IyCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2hNHyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2hNICCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2hNISCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2hNFyCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Car"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2hNGCCkEeSoSYLBudPjwA" x="560" y="103"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2h0JCCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2h0JyCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2h0KCCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2ibMCCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//ServiceDepot/location"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2ibMSCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2h0KSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2h0KiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2h0KyCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2h0LCCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2h0LSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2h0LiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2h0LyCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2h0JSCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//ServiceDepot"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2h0JiCkEeSoSYLBudPjwA" x="290" y="15"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2ibMiCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2ibNSCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2ibNiCkEeSoSYLBudPjwA" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_A2ibPiCkEeSoSYLBudPjwA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="CarRental2.ecore#//Check/description"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A2ibPyCkEeSoSYLBudPjwA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2ibNyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2ibOCCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2ibOSCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2ibOiCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2ibOyCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2ibPCCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2ibPSCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2ibMyCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//Check"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2ibNCCkEeSoSYLBudPjwA" x="925" y="15"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_A2jCQCCkEeSoSYLBudPjwA" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_A2jCQyCkEeSoSYLBudPjwA" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_A2jCRCCkEeSoSYLBudPjwA" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2jCRSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2jCRiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2jCRyCkEeSoSYLBudPjwA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2jCSCCkEeSoSYLBudPjwA" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_A2jCSSCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_A2jCSiCkEeSoSYLBudPjwA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_A2jCSyCkEeSoSYLBudPjwA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_A2jCQSCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="CarRental2.ecore#//TernaryRelationMaintenance"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_A2jCQiCkEeSoSYLBudPjwA" x="560" y="15"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_A2ZRQSCkEeSoSYLBudPjwA"/>
+  <element xmi:type="ecore:EPackage" href="CarRental2.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_A2jCTCCkEeSoSYLBudPjwA" type="3002" source="_A2eJwCCkEeSoSYLBudPjwA" target="_A2f--CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2jCUCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2jCUSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2jCUiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2jCUyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2jCTSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2jCTiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Customer/Booking_Rental"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2jCTyCkEeSoSYLBudPjwA" points="[0, 0, 0, 102]$[0, -102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3nZQCCkEeSoSYLBudPjwA" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3nZQSCkEeSoSYLBudPjwA" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2jpUCCkEeSoSYLBudPjwA" type="3003" source="_A2eJwCCkEeSoSYLBudPjwA" target="_A2btgCCkEeSoSYLBudPjwA">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2jpUSCkEeSoSYLBudPjwA" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2jpUiCkEeSoSYLBudPjwA" fontName="Droid Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2jpUyCkEeSoSYLBudPjwA" points="[0, 0, 148, 60]$[0, -30, 148, 30]$[-148, -30, 0, 30]$[-148, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3myMiCkEeSoSYLBudPjwA" id="(0.24615384615384617,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3myMyCkEeSoSYLBudPjwA" id="(0.6666666666666666,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2jpVCCkEeSoSYLBudPjwA" type="3002" source="_A2ew0iCkEeSoSYLBudPjwA" target="_A2fX6CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2jpWCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2jpWSCkEeSoSYLBudPjwA" x="-106" y="-100"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2jpWiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2jpWyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2jpVSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2jpViCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Employee/Management_Branch_role_managedBranch"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2jpVyCkEeSoSYLBudPjwA" points="[0, 0, -92, 173]$[0, -131, -92, 42]$[92, -173, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q6weMC91EeSIts_anAuDXg" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q6weMS91EeSIts_anAuDXg" id="(0.4961832061068702,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2jpXCCkEeSoSYLBudPjwA" type="3002" source="_A2ew0iCkEeSoSYLBudPjwA" target="_A2fX6CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2kQYCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2kQYSCkEeSoSYLBudPjwA" x="-123" y="42"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2kQYiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2kQYyCkEeSoSYLBudPjwA" x="10" y="-18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2jpXSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2jpXiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Employee/Employment_Branch_role_employer"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2jpXyCkEeSoSYLBudPjwA" points="[26, -5, -11, 203]$[183, -40, 146, 168]$[183, -174, 146, 34]$[183, -174, 146, 34]$[37, -208, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Tv--4C91EeSIts_anAuDXg" id="(0.8404907975460123,0.6271186440677966)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Tv--4S91EeSIts_anAuDXg" id="(0.4961832061068702,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2kQZCCkEeSoSYLBudPjwA" type="3003" source="_A2ew0iCkEeSoSYLBudPjwA" target="_A2btgCCkEeSoSYLBudPjwA">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2kQZSCkEeSoSYLBudPjwA" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2kQZiCkEeSoSYLBudPjwA" fontName="Droid Sans"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2kQZyCkEeSoSYLBudPjwA" points="[0, 0, 481, 179]$[0, -30, 481, 149]$[-360, -30, 121, 149]$[-360, -149, 121, 30]$[-481, -149, 0, 30]$[-481, -179, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3sRwCCkEeSoSYLBudPjwA" id="(0.2463768115942029,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3sRwSCkEeSoSYLBudPjwA" id="(0.3333333333333333,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2kQaCCkEeSoSYLBudPjwA" type="3002" source="_A2fX6CCkEeSoSYLBudPjwA" target="_A2ew0iCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2kQbCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2kQbSCkEeSoSYLBudPjwA" x="9" y="-109"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2kQbiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2kQbyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2kQaSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2kQaiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Branch/Management_Employee_role_manager"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2kQayCkEeSoSYLBudPjwA" points="[0, 0, 92, -173]$[-92, 42, 0, -131]$[-92, 173, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rqsiCkEeSoSYLBudPjwA" id="(0.4961832061068702,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rqsyCkEeSoSYLBudPjwA" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2kQcCCkEeSoSYLBudPjwA" type="3002" source="_A2fX6CCkEeSoSYLBudPjwA" target="_A2ew0iCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2kQdCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2kQdSCkEeSoSYLBudPjwA" x="-57" y="-41"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2k3cCCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2k3cSCkEeSoSYLBudPjwA" x="47" y="11"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2kQcSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2kQciCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Branch/Employment_Employee_role_employee"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2kQcyCkEeSoSYLBudPjwA" points="[0, 0, 37, -208]$[146, 34, 183, -174]$[146, 34, 183, -174]$[146, 168, 183, -40]$[-11, 203, 26, -5]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rqsCCkEeSoSYLBudPjwA" id="(0.4961832061068702,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rqsSCkEeSoSYLBudPjwA" id="(0.8404907975460123,0.6271186440677966)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2k3ciCkEeSoSYLBudPjwA" type="3002" source="_A2fX6CCkEeSoSYLBudPjwA" target="_A2hNFiCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2k3diCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2k3dyCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2k3eCCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2k3eSCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2k3cyCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2k3dCCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Branch/Fleet_Car"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2k3dSCkEeSoSYLBudPjwA" points="[0, 0, -70, 341]$[230, -61, 160, 280]$[230, -170, 160, 171]$[209, -281, 139, 60]$[70, -341, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3tf4SCkEeSoSYLBudPjwA" id="(0.7099236641221374,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3tf4iCkEeSoSYLBudPjwA" id="(0.6645569620253164,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2k3eiCkEeSoSYLBudPjwA" type="3002" source="_A2fX6CCkEeSoSYLBudPjwA" target="_A2gmCCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2k3fiCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2k3fyCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2k3gCCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2k3gSCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2k3eyCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2k3fCCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Branch/Offers_CarGroup"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2k3fSCkEeSoSYLBudPjwA" points="[0, 0, -78, 230]$[-84, -61, -162, 169]$[-84, -170, -162, 60]$[78, -230, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3sRwiCkEeSoSYLBudPjwA" id="(0.42748091603053434,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3sRwyCkEeSoSYLBudPjwA" id="(0.46788990825688076,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2k3giCkEeSoSYLBudPjwA" type="3002" source="_A2fX6CCkEeSoSYLBudPjwA" target="_A2f--CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2legCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2legSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2legiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2legyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2k3gyCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2k3hCCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Branch/Provider_Rental"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2k3hSCkEeSoSYLBudPjwA" points="[0, 0, 214, 102]$[-170, -61, 44, 41]$[-214, -102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rDoCCkEeSoSYLBudPjwA" id="(0.13740458015267176,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3rDoSCkEeSoSYLBudPjwA" id="(0.6642857142857143,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2lehCCkEeSoSYLBudPjwA" type="3002" source="_A2f--CCkEeSoSYLBudPjwA" target="_A2eJwCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2leiCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2leiSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2leiiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2leiyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2lehSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2lehiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Rental/Booking_Customer"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2lehyCkEeSoSYLBudPjwA" points="[0, 0, 0, -102]$[0, 102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3onYCCkEeSoSYLBudPjwA" id="(0.5,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3onYSCkEeSoSYLBudPjwA" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2lejCCkEeSoSYLBudPjwA" type="3002" source="_A2f--CCkEeSoSYLBudPjwA" target="_A2fX6CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2lekCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2lekSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2lekiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2lekyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2lejSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2lejiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Rental/Provider_Branch"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2lejyCkEeSoSYLBudPjwA" points="[0, 0, -210, -102]$[1, 41, -209, -61]$[210, 102, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3pOcCCkEeSoSYLBudPjwA" id="(0.8285714285714286,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3pOcSCkEeSoSYLBudPjwA" id="(0.2824427480916031,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2lelCCkEeSoSYLBudPjwA" type="3002" source="_A2f--CCkEeSoSYLBudPjwA" target="_A2gmCCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2mFkCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFkSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2mFkiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFkyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2lelSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2leliCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Rental/Reservation_CarGroup"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2lelyCkEeSoSYLBudPjwA" points="[0, 0, -283, 60]$[283, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3onYiCkEeSoSYLBudPjwA" id="(0.7571428571428571,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3onYyCkEeSoSYLBudPjwA" id="(0.1559633027522936,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2mFlCCkEeSoSYLBudPjwA" type="3002" source="_A2f--CCkEeSoSYLBudPjwA" target="_A2hNFiCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2mFmCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFmSCkEeSoSYLBudPjwA" x="-20" y="-24"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2mFmiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFmyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2mFlSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2mFliCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Rental/Assignment_Car"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2mFlyCkEeSoSYLBudPjwA" points="[0, 0, -302, 171]$[0, -111, -302, 60]$[302, -171, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3s40iCkEeSoSYLBudPjwA" id="(0.5071428571428571,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3tf4CCkEeSoSYLBudPjwA" id="(0.16455696202531644,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2mFnCCkEeSoSYLBudPjwA" type="3002" source="_A2gmCCCkEeSoSYLBudPjwA" target="_A2fX6CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2mFoCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFoSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2mFoiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mFoyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2mFnSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2mFniCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//CarGroup/Offers_Branch"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2mFnyCkEeSoSYLBudPjwA" points="[0, 0, 77, -230]$[0, 169, 77, -61]$[-77, 230, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3s40CCkEeSoSYLBudPjwA" id="(0.6238532110091743,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3s40SCkEeSoSYLBudPjwA" id="(0.5648854961832062,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2msoCCkEeSoSYLBudPjwA" type="3002" source="_A2gmCCCkEeSoSYLBudPjwA" target="_A2hNFiCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2mspCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mspSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2mspiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2mspyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2msoSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2msoiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//CarGroup/Classification_Car"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2msoyCkEeSoSYLBudPjwA" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3pOciCkEeSoSYLBudPjwA" id="(0.4954128440366973,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3p1gCCkEeSoSYLBudPjwA" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2msqCCkEeSoSYLBudPjwA" type="3002" source="_A2gmCCCkEeSoSYLBudPjwA" target="_A2f--CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2msrCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2msrSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2msriCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2msryCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2msqSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2msqiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//CarGroup/Reservation_Rental"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2msqyCkEeSoSYLBudPjwA" points="[0, 0, 283, -60]$[-283, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3p1gSCkEeSoSYLBudPjwA" id="(0.3119266055045872,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3p1giCkEeSoSYLBudPjwA" id="(0.8785714285714286,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2mssCCkEeSoSYLBudPjwA" type="3002" source="_A2gmCCCkEeSoSYLBudPjwA" target="_A2gmCCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2nTsCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTsSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2nTsiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTsyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2mssSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2mssiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//CarGroup/Quality_CarGroup_role_lower"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2mssyCkEeSoSYLBudPjwA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2nTtCCkEeSoSYLBudPjwA" type="3002" source="_A2gmCCCkEeSoSYLBudPjwA" target="_A2gmCCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2nTuCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTuSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2nTuiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTuyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2nTtSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2nTtiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//CarGroup/Quality_CarGroup_role_higher"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2nTtyCkEeSoSYLBudPjwA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2nTvCCkEeSoSYLBudPjwA" type="3002" source="_A2hNFiCkEeSoSYLBudPjwA" target="_A2fX6CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2nTwCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTwSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2nTwiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2nTwyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2nTvSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2nTviCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Car/Fleet_Branch"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2nTvyCkEeSoSYLBudPjwA" points="[0, 0, 77, -341]$[306, 60, 383, -281]$[306, 280, 383, -61]$[-77, 341, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3uG8CCkEeSoSYLBudPjwA" id="(0.8291139240506329,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3uG8SCkEeSoSYLBudPjwA" id="(0.8549618320610687,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2nTxCCkEeSoSYLBudPjwA" type="3002" source="_A2hNFiCkEeSoSYLBudPjwA" target="_A2gmCCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2n6wCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n6wSCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2n6wiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n6wyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2nTxSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2nTxiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Car/Classification_CarGroup"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2nTxyCkEeSoSYLBudPjwA" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3oAUSCkEeSoSYLBudPjwA" id="(0.5,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3oAUiCkEeSoSYLBudPjwA" id="(0.4954128440366973,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2n6xCCkEeSoSYLBudPjwA" type="3002" source="_A2hNFiCkEeSoSYLBudPjwA" target="_A2f--CCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2n6yCCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n6ySCkEeSoSYLBudPjwA" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2n6yiCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n6yyCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2n6xSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2n6xiCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Car/Assignment_Rental"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2n6xyCkEeSoSYLBudPjwA" points="[0, 0, 310, -171]$[-147, 60, 163, -111]$[-149, 110, 161, -61]$[-310, 171, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3uG8iCkEeSoSYLBudPjwA" id="(0.3291139240506329,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3uG8yCkEeSoSYLBudPjwA" id="(0.6357142857142857,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2n6zCCkEeSoSYLBudPjwA" type="3002" source="_A2hNFiCkEeSoSYLBudPjwA" target="_A2jCQCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2n60CCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n60SCkEeSoSYLBudPjwA" x="-3" y="-48"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2n60iCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2n60yCkEeSoSYLBudPjwA" x="-3" y="18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2n6zSCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2n6ziCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Car/toMaintenance"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2n6zyCkEeSoSYLBudPjwA" points="[0, 0, 155, 60]$[-155, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3nZQiCkEeSoSYLBudPjwA" id="(0.3291139240506329,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3oAUCCkEeSoSYLBudPjwA" id="(0.2538860103626943,0.9411764705882353)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2oh0CCkEeSoSYLBudPjwA" type="3002" source="_A2h0JCCkEeSoSYLBudPjwA" target="_A2jCQCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2oh1CCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2oh1SCkEeSoSYLBudPjwA" x="-26" y="-12"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2oh1iCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2oh1yCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2oh0SCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2oh0iCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//ServiceDepot/toMaintenance"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2oh0yCkEeSoSYLBudPjwA" points="[0, 0, -159, 60]$[159, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3qckiCkEeSoSYLBudPjwA" id="(0.9649122807017544,0.5098039215686274)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3qckyCkEeSoSYLBudPjwA" id="(0.0,0.5294117647058824)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2oh2CCkEeSoSYLBudPjwA" type="3002" source="_A2ibMiCkEeSoSYLBudPjwA" target="_A2jCQCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2oh3CCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2oh3SCkEeSoSYLBudPjwA" x="-23" y="-13"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2oh3iCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2oh3yCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2oh2SCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2oh2iCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//Check/toMaintenance"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2oh2yCkEeSoSYLBudPjwA" points="[0, 0, 175, 2]$[-174, 0, 1, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L9dh8C9uEeSIts_anAuDXg" id="(0.007518796992481203,0.5686274509803921)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L9dh8S9uEeSIts_anAuDXg" id="(0.9948186528497409,0.5294117647058824)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2oh4CCkEeSoSYLBudPjwA" type="3002" source="_A2jCQCCkEeSoSYLBudPjwA" target="_A2h0JCCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2oh5CCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2oh5SCkEeSoSYLBudPjwA" x="-20" y="-22"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2pI4CCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2pI4SCkEeSoSYLBudPjwA" x="16" y="8"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2oh4SCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2oh4iCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//TernaryRelationMaintenance/toServiceDepot"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2oh4yCkEeSoSYLBudPjwA" points="[0, 0, 159, -60]$[-159, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4jQMAC9tEeSIts_anAuDXg" id="(0.0,0.5294117647058824)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4jQMAS9tEeSIts_anAuDXg" id="(0.9649122807017544,0.5098039215686274)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2pI4iCkEeSoSYLBudPjwA" type="3002" source="_A2jCQCCkEeSoSYLBudPjwA" target="_A2ibMiCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2pI5iCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2pI5yCkEeSoSYLBudPjwA" x="-2" y="-13"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2pI6CCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2pI6SCkEeSoSYLBudPjwA" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2pI4yCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2pI5CCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//TernaryRelationMaintenance/toCheck"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2pI5SCkEeSoSYLBudPjwA" points="[1, 2, -174, 0]$[175, 2, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3myMCCkEeSoSYLBudPjwA" id="(0.9948186528497409,0.5294117647058824)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_A3myMSCkEeSoSYLBudPjwA" id="(0.007518796992481203,0.5686274509803921)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_A2pI6iCkEeSoSYLBudPjwA" type="3002" source="_A2jCQCCkEeSoSYLBudPjwA" target="_A2hNFiCkEeSoSYLBudPjwA">
+    <children xmi:type="notation:Node" xmi:id="_A2pI7iCkEeSoSYLBudPjwA" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2pI7yCkEeSoSYLBudPjwA" x="-12" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_A2pI8CCkEeSoSYLBudPjwA" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_A2pI8SCkEeSoSYLBudPjwA" x="7" y="15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_A2pI6yCkEeSoSYLBudPjwA" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_A2pI7CCkEeSoSYLBudPjwA" fontColor="4210752" fontName="Droid Sans" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="CarRental2.ecore#//TernaryRelationMaintenance/toCar"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_A2pI7SCkEeSoSYLBudPjwA" points="[0, 0, -155, -60]$[155, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q8JCcC9uEeSIts_anAuDXg" id="(0.2538860103626943,0.9411764705882353)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q8JCcS9uEeSIts_anAuDXg" id="(0.3291139240506329,0.0)"/>
+  </edges>
+</notation:Diagram>

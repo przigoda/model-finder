@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ZugModel" nsURI="ZugModel" nsPrefix="ZugModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Zug">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Zugaufbau_Waggon" lowerBound="1" upperBound="-1" eType="//Waggon" eOpposite="//Waggon/Zugaufbau_Zug"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Einsatz_Fahrt" upperBound="-1" eType="//Fahrt" eOpposite="//Fahrt/Einsatz_Zug"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Waggon">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anzahlPlaetze">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Zugaufbau_Zug" lowerBound="1" eType="//Zug" eOpposite="//Zug/Zugaufbau_Waggon"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reihung_Waggon_role_nachfolger" eType="//Waggon" eOpposite="//Waggon/Reihung_Waggon_role_vorgaenger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Reihung_Waggon_role_vorgaenger" eType="//Waggon" eOpposite="//Waggon/Reihung_Waggon_role_nachfolger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResWaggon_Reservierung" upperBound="-1" eType="//Reservierung" eOpposite="//Reservierung/ResWaggon_Waggon"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fahrt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Einsatz_Zug" lowerBound="1" eType="//Zug" eOpposite="//Zug/Einsatz_Fahrt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FahrtStrecke_Strecke" lowerBound="1" eType="//Strecke" eOpposite="//Strecke/FahrtStrecke_Fahrt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResFahrt_Reservierung" upperBound="-1" eType="//Reservierung" eOpposite="//Reservierung/ResFahrt_Fahrt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bahnhof">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Halt_Strecke" upperBound="-1" eType="//Strecke" eOpposite="//Strecke/Halt_Bahnhof"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RVon_Reservierung_role_resVon" upperBound="-1" eType="//Reservierung" eOpposite="//Reservierung/RVon_Bahnhof_role_von"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RBis_Reservierung_role_resBis" upperBound="-1" eType="//Reservierung" eOpposite="//Reservierung/RBis_Bahnhof_role_bis"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Strecke">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="FahrtStrecke_Fahrt" upperBound="-1" eType="//Fahrt" eOpposite="//Fahrt/FahrtStrecke_Strecke"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Halt_Bahnhof" lowerBound="2" upperBound="-1" eType="//Bahnhof" eOpposite="//Bahnhof/Halt_Strecke"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reservierung">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platznummer">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RVon_Bahnhof_role_von" lowerBound="1" eType="//Bahnhof" eOpposite="//Bahnhof/RVon_Reservierung_role_resVon"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RBis_Bahnhof_role_bis" lowerBound="1" eType="//Bahnhof" eOpposite="//Bahnhof/RBis_Reservierung_role_resBis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResFahrt_Fahrt" lowerBound="1" eType="//Fahrt" eOpposite="//Fahrt/ResFahrt_Reservierung"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResWaggon_Waggon" lowerBound="1" eType="//Waggon" eOpposite="//Waggon/ResWaggon_Reservierung"/>
+  </eClassifiers>
+</ecore:EPackage>

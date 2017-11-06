@@ -1,0 +1,49 @@
+model boardingSystem
+
+class PassengerID
+attributes
+  checkedIn: Flight
+  passedSecurity: Boolean
+  passportChecked: Boolean
+operations
+  checkIn(f: Flight)
+  passSecurity(f: Flight)
+  boardFlight(f: Flight)
+constraints
+  inv i1: (passedSecurity = true) implies (checkedIn.isDefined())
+  inv i2: (passportChecked = true) implies (passedSecurity = true and checkedIn.isDefined())
+  inv i3: checkedIn = flight or (not checkedIn.isDefined())
+end
+
+class Flight
+attributes
+  capacity: Integer
+  checkedIn: Integer
+  international: Boolean
+operations
+constraints
+  inv i4: checkedIn <= capacity
+end
+
+association belongsTo between
+-- hier bitte nochmal die Multiplizitäten prüfen; jeder PassengerID darf mehrere Flüge haben
+  PassengerID[*] role ticket
+  Flight[1] role flight
+end
+
+constraints
+
+context PassengerID::checkIn(f: Flight)
+  pre: f.checkedIn < f.capacity
+  post: checkedIn = f
+  post: f.checkedIn = f.checkedIn@pre + 1
+
+context PassengerID::passSecurity(f: Flight)
+  pre: checkedIn = f
+  post: (f.international) implies (passportChecked = true)
+  post: passedSecurity = true
+
+context PassengerID::boardFlight(f: Flight)
+  pre: checkedIn = f
+  pre: passedSecurity = true
+

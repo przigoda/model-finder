@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_F1zBAJ5vEeOn1Ny_ZBpGbQ" name="ZugModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBAZ5vEeOn1Ny_ZBpGbQ" name="Bahnhof">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F1zBAp5vEeOn1Ny_ZBpGbQ" name="name" type="_F1zBEJ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zBA55vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zBBJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBBZ5vEeOn1Ny_ZBpGbQ" name="Fahrt"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBBp5vEeOn1Ny_ZBpGbQ" name="Reservierung">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F1zBB55vEeOn1Ny_ZBpGbQ" name="platznummer" type="_F1zBEZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zBCJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zBCZ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBCp5vEeOn1Ny_ZBpGbQ" name="Strecke"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBC55vEeOn1Ny_ZBpGbQ" name="Waggon">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F1zBDJ5vEeOn1Ny_ZBpGbQ" name="anzahlPlaetze" type="_F1zBEZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zBDZ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zBDp5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_F1zBD55vEeOn1Ny_ZBpGbQ" name="Zug"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_F1zBEJ5vEeOn1Ny_ZBpGbQ" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_F1zBEZ5vEeOn1Ny_ZBpGbQ" name="Integer"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zBEp5vEeOn1Ny_ZBpGbQ" name="Einsatz" memberEnd="_F1zoEJ5vEeOn1Ny_ZBpGbQ _F1zoE55vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoEJ5vEeOn1Ny_ZBpGbQ _F1zoE55vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoEJ5vEeOn1Ny_ZBpGbQ" name="fahrt" type="_F1zBBZ5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zBEp5vEeOn1Ny_ZBpGbQ" association="_F1zBEp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoEZ5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoEp5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoE55vEeOn1Ny_ZBpGbQ" name="zug" type="_F1zBD55vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zBEp5vEeOn1Ny_ZBpGbQ" association="_F1zBEp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoFJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoFZ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoFp5vEeOn1Ny_ZBpGbQ" name="FahrtStrecke" memberEnd="_F1zoF55vEeOn1Ny_ZBpGbQ _F1zoGp5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoF55vEeOn1Ny_ZBpGbQ _F1zoGp5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoF55vEeOn1Ny_ZBpGbQ" name="fahrt" type="_F1zBBZ5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoFp5vEeOn1Ny_ZBpGbQ" association="_F1zoFp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoGJ5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoGZ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoGp5vEeOn1Ny_ZBpGbQ" name="strecke" type="_F1zBCp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoFp5vEeOn1Ny_ZBpGbQ" association="_F1zoFp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoG55vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoHJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoHZ5vEeOn1Ny_ZBpGbQ" name="Halt" memberEnd="_F1zoHp5vEeOn1Ny_ZBpGbQ _F1zoIZ5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoHp5vEeOn1Ny_ZBpGbQ _F1zoIZ5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoHp5vEeOn1Ny_ZBpGbQ" name="strecke" type="_F1zBCp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoHZ5vEeOn1Ny_ZBpGbQ" association="_F1zoHZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoH55vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoIJ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoIZ5vEeOn1Ny_ZBpGbQ" name="bahnhof" type="_F1zBAZ5vEeOn1Ny_ZBpGbQ" isOrdered="true" owningAssociation="_F1zoHZ5vEeOn1Ny_ZBpGbQ" association="_F1zoHZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoIp5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoI55vEeOn1Ny_ZBpGbQ" value="2"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoJJ5vEeOn1Ny_ZBpGbQ" name="RBis" memberEnd="_F1zoJZ5vEeOn1Ny_ZBpGbQ _F1zoKJ5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoJZ5vEeOn1Ny_ZBpGbQ _F1zoKJ5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoJZ5vEeOn1Ny_ZBpGbQ" name="bis" type="_F1zBAZ5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoJJ5vEeOn1Ny_ZBpGbQ" association="_F1zoJJ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoJp5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoJ55vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoKJ5vEeOn1Ny_ZBpGbQ" name="resBis" type="_F1zBBp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoJJ5vEeOn1Ny_ZBpGbQ" association="_F1zoJJ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoKZ5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoKp5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoK55vEeOn1Ny_ZBpGbQ" name="RVon" memberEnd="_F1zoLJ5vEeOn1Ny_ZBpGbQ _F1zoL55vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoLJ5vEeOn1Ny_ZBpGbQ _F1zoL55vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoLJ5vEeOn1Ny_ZBpGbQ" name="von" type="_F1zBAZ5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoK55vEeOn1Ny_ZBpGbQ" association="_F1zoK55vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoLZ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoLp5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoL55vEeOn1Ny_ZBpGbQ" name="resVon" type="_F1zBBp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoK55vEeOn1Ny_ZBpGbQ" association="_F1zoK55vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoMJ5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoMZ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoMp5vEeOn1Ny_ZBpGbQ" name="Reihung" memberEnd="_F1zoM55vEeOn1Ny_ZBpGbQ _F1zoNp5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoM55vEeOn1Ny_ZBpGbQ _F1zoNp5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoM55vEeOn1Ny_ZBpGbQ" name="vorgaenger" type="_F1zBC55vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoMp5vEeOn1Ny_ZBpGbQ" association="_F1zoMp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoNJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoNZ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoNp5vEeOn1Ny_ZBpGbQ" name="nachfolger" type="_F1zBC55vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoMp5vEeOn1Ny_ZBpGbQ" association="_F1zoMp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoN55vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoOJ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F1zoOZ5vEeOn1Ny_ZBpGbQ" name="ResFahrt" memberEnd="_F1zoOp5vEeOn1Ny_ZBpGbQ _F1zoPZ5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F1zoOp5vEeOn1Ny_ZBpGbQ _F1zoPZ5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoOp5vEeOn1Ny_ZBpGbQ" name="reservierung" type="_F1zBBp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoOZ5vEeOn1Ny_ZBpGbQ" association="_F1zoOZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F1zoO55vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F1zoPJ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F1zoPZ5vEeOn1Ny_ZBpGbQ" name="fahrt" type="_F1zBBZ5vEeOn1Ny_ZBpGbQ" owningAssociation="_F1zoOZ5vEeOn1Ny_ZBpGbQ" association="_F1zoOZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F10PIJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F10PIZ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F10PIp5vEeOn1Ny_ZBpGbQ" name="ResWaggon" memberEnd="_F10PI55vEeOn1Ny_ZBpGbQ _F10PJp5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F10PI55vEeOn1Ny_ZBpGbQ _F10PJp5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F10PI55vEeOn1Ny_ZBpGbQ" name="reservierung" type="_F1zBBp5vEeOn1Ny_ZBpGbQ" owningAssociation="_F10PIp5vEeOn1Ny_ZBpGbQ" association="_F10PIp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F10PJJ5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F10PJZ5vEeOn1Ny_ZBpGbQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F10PJp5vEeOn1Ny_ZBpGbQ" name="waggon" type="_F1zBC55vEeOn1Ny_ZBpGbQ" owningAssociation="_F10PIp5vEeOn1Ny_ZBpGbQ" association="_F10PIp5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F10PJ55vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F10PKJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_F10PKZ5vEeOn1Ny_ZBpGbQ" name="Zugaufbau" memberEnd="_F10PKp5vEeOn1Ny_ZBpGbQ _F10PLZ5vEeOn1Ny_ZBpGbQ" navigableOwnedEnd="_F10PKp5vEeOn1Ny_ZBpGbQ _F10PLZ5vEeOn1Ny_ZBpGbQ">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F10PKp5vEeOn1Ny_ZBpGbQ" name="zug" type="_F1zBD55vEeOn1Ny_ZBpGbQ" aggregation="shared" owningAssociation="_F10PKZ5vEeOn1Ny_ZBpGbQ" association="_F10PKZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F10PK55vEeOn1Ny_ZBpGbQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F10PLJ5vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_F10PLZ5vEeOn1Ny_ZBpGbQ" name="waggon" type="_F1zBC55vEeOn1Ny_ZBpGbQ" owningAssociation="_F10PKZ5vEeOn1Ny_ZBpGbQ" association="_F10PKZ5vEeOn1Ny_ZBpGbQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F10PLp5vEeOn1Ny_ZBpGbQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F10PL55vEeOn1Ny_ZBpGbQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

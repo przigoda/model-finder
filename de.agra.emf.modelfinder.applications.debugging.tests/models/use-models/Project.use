@@ -1,0 +1,45 @@
+-- $ProjectHeader: use 0.393 Wed, 16 May 2007 14:10:28 +0200 opti $
+
+-- Example from exercises of the lecture Object-oriented Software Design
+
+model Project
+
+class Employee
+attributes
+  name : String
+  salary : Integer
+end
+
+class Department
+attributes
+  name : String
+  location : String
+  budget : Integer
+end
+
+class Project 
+attributes
+  name : String
+  budget : Integer
+end
+
+
+association WorksIn between
+  Employee[*]
+  Department[1..*]
+end
+
+association WorksOn between
+  Employee[*]
+  Project[*]
+end
+
+association Controls between
+  Department[1]
+  Project[*]
+end
+
+
+-- Proposal for global queries?!
+--  context Department select:
+--    name = 'String'

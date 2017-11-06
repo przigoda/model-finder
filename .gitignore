@@ -1,0 +1,16 @@
+.metadata
+.settings/
+xtend-gen/
+src-gen
+bin/
+cachedir
+classes/
+*/libz3.so
+*/libz3java.so
+*.orig
+*.*~
+*/.gitignore
+de.agra.emf.metamodels.SMTlib2extended/src/de/agra/emf/metamodels/SMTlib2extended/*.java
+de.agra.emf.metamodels.SMTlib2extended/src/de/agra/emf/metamodels/SMTlib2extended/impl/*.java
+de.agra.emf.metamodels.SMTlib2extended/src/de/agra/emf/metamodels/SMTlib2extended/util/*.java
+de.agra.emf.modelfinder.encoding.tests/DMFB*

@@ -1,0 +1,73 @@
+model Sudoku
+
+class Board
+  operations
+    getField(iRow : Integer, iCol : Integer)
+    -- : Field = self.rows->any(index = iRow).fields->any(column.index = iCol)
+end
+
+class Row
+  attributes
+    index : Integer
+  operations
+    getValues() 
+    -- : Set(Integer) = fields.value->asSet()
+end
+
+class Column
+  attributes
+    index : Integer
+  operations
+    getValues()
+    -- : Set(Integer) = fields.value->asSet()
+end
+
+class Square
+  attributes
+    index : Integer
+  operations
+    getValues() 
+    -- : Set(Integer) = fields.value->asSet()
+end
+
+class Field
+  attributes
+  value : Integer
+end
+
+composition BoardRows between
+  Board[1]
+  Row[9] role rows
+end
+
+composition BoardColumns between
+  Board[1]
+  Column[9] role columns
+end
+
+composition BoardSquares between
+  Board[1]
+  Square[9] role squares
+end
+
+composition BoardFields between
+  Board[1]
+  Field[81] role fields
+end
+
+association RowFields between
+  Row[1]
+  Field[9] role fields
+end
+
+association ColumnFields between
+  Column[1]
+  Field[9] role fields
+end
+
+association SquareFields between
+  Square[1]
+  Field[9] role fields
+end
+
+

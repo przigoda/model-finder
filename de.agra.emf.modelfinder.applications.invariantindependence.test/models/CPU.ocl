@@ -1,0 +1,221 @@
+import CPU : 'CPU.ecore#/'
+
+package CPU
+
+context ProgramCounter::increment() :
+  pre: pc <> 127
+  post po1: pc = pc@pre + 1
+  post:   HasProgramCounter_CPU_role_cpu.HasALU_ALU_role_alu.zeroFlag
+        = HasProgramCounter_CPU_role_cpu.HasALU_ALU_role_alu.zeroFlag@pre
+  post:  HasProgramCounter_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.type = r.type@pre
+        )
+  post:   HasProgramCounter_CPU_role_cpu.HasMemory_Memory.entries
+        = HasProgramCounter_CPU_role_cpu.HasMemory_Memory.entries@pre
+  post:  HasProgramCounter_CPU_role_cpu
+        .HasRegister_Register
+        ->one( r |
+                r.type = 1 -- RegisterType::pc
+            and r.value = pc
+        )
+  post:  HasProgramCounter_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+                r.type <> 1 -- RegisterType::pc
+            and r.value = r.value@pre
+        )
+
+context ProgramCounter::jump() :
+  pre p1: enable = true
+  pre p2: not (jump.oclIsUndefined())
+  pre: jump < HasProgramCounter_CPU_role_cpu.HasMemory_Memory.entries
+  post po1: pc = jump@pre
+  post:   HasProgramCounter_CPU_role_cpu.HasALU_ALU_role_alu.zeroFlag
+        = HasProgramCounter_CPU_role_cpu.HasALU_ALU_role_alu.zeroFlag@pre
+  post:  HasProgramCounter_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.type = r.type@pre
+        )
+  post:   HasProgramCounter_CPU_role_cpu.HasMemory_Memory.entries
+        = HasProgramCounter_CPU_role_cpu.HasMemory_Memory.entries@pre
+  post:  HasProgramCounter_CPU_role_cpu
+        .HasRegister_Register
+        ->one( r |
+                r.type = 1 -- RegisterType::pc
+            and r.value = pc
+        )
+
+context  ControlUnit::jump() :
+  pre p1: operation = 1 -- Operation::jump
+  pre p2: not (constant.oclIsUndefined())
+  post po1:  HasControlUnit_CPU_role_cpu
+            .HasProgramCounter_ProgramCounter_role_programcounter
+            .jump
+            = constant
+  post po2:
+     HasControlUnit_CPU_role_cpu
+     .HasProgramCounter_ProgramCounter_role_programcounter
+     .enable
+   = true
+  post po3:
+     HasControlUnit_CPU_role_cpu
+    .HasProgramCounter_ProgramCounter_role_programcounter
+    .pc
+  = HasControlUnit_CPU_role_cpu
+    .HasProgramCounter_ProgramCounter_role_programcounter
+    .pc@pre
+  post:
+     HasControlUnit_CPU_role_cpu
+    .HasALU_ALU_role_alu
+    .zeroFlag
+  = HasControlUnit_CPU_role_cpu
+    .HasALU_ALU_role_alu
+    .zeroFlag@pre
+  post: HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.type = r.type@pre
+        )
+  post: HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.value = r.value@pre
+        )
+  post:  HasControlUnit_CPU_role_cpu
+        .HasMemory_Memory
+        .entries
+      =  HasControlUnit_CPU_role_cpu
+        .HasMemory_Memory
+        .entries@pre
+
+context  ControlUnit::bez() :
+  pre p1: operation = 2 -- Operation::bez
+  pre p2: not (constant.oclIsUndefined())
+  post po1:  HasControlUnit_CPU_role_cpu
+            .HasProgramCounter_ProgramCounter_role_programcounter
+            .enable
+          =  HasControlUnit_CPU_role_cpu
+            .HasALU_ALU_role_alu
+            .zeroFlag
+  post po2:
+    (not ( HasControlUnit_CPU_role_cpu
+          .HasALU_ALU_role_alu
+          .zeroFlag
+          .oclIsUndefined() ) )
+    implies
+      (  HasControlUnit_CPU_role_cpu
+        .HasProgramCounter_ProgramCounter_role_programcounter
+        .jump
+      = constant)
+  post po3:  HasControlUnit_CPU_role_cpu
+            .HasProgramCounter_ProgramCounter_role_programcounter
+            .pc
+          =  HasControlUnit_CPU_role_cpu
+            .HasProgramCounter_ProgramCounter_role_programcounter
+            .pc@pre
+  post:    HasControlUnit_CPU_role_cpu
+          .HasALU_ALU_role_alu
+          .zeroFlag
+        =  HasControlUnit_CPU_role_cpu
+          .HasALU_ALU_role_alu
+          .zeroFlag@pre
+  post:  HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.type = r.type@pre
+        )
+  post:  HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.value = r.value@pre
+        )
+  post:    HasControlUnit_CPU_role_cpu
+          .HasMemory_Memory.entries
+        =  HasControlUnit_CPU_role_cpu
+          .HasMemory_Memory
+          .entries@pre
+
+context  ControlUnit::add() :
+  pre p1: operation = 3 -- Operation::addition
+  pre p2: not (constant.oclIsUndefined())
+  post po1:    HasControlUnit_CPU_role_cpu
+              .HasALU_ALU_role_alu
+              .operation
+            = 3 -- Operation::addition
+  post po3:    HasControlUnit_CPU_role_cpu
+              .HasProgramCounter_ProgramCounter_role_programcounter
+              .pc
+            =  HasControlUnit_CPU_role_cpu
+              .HasProgramCounter_ProgramCounter_role_programcounter
+              .pc@pre
+  post:    HasControlUnit_CPU_role_cpu
+          .HasALU_ALU_role_alu
+          .zeroFlag
+        =  HasControlUnit_CPU_role_cpu
+          .HasALU_ALU_role_alu
+          .zeroFlag@pre
+  post:  HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.type = r.type@pre
+        )
+  post: HasControlUnit_CPU_role_cpu
+        .HasRegister_Register
+        ->forAll( r |
+            r.value = r.value@pre
+        )
+  post:    HasControlUnit_CPU_role_cpu
+          .HasMemory_Memory
+          .entries
+        =  HasControlUnit_CPU_role_cpu
+          .HasMemory_Memory
+          .entries@pre
+
+context  ControlUnit
+  inv i1:
+    operation = 1 -- Operation::jump
+    implies
+      HasOperands_Register_role_register->size() = 0
+  inv i2:
+    operation = 2 -- Operation::bez
+    implies
+      HasOperands_Register_role_register->size() = 0
+  inv i3:
+    operation = 3 -- Operation::addition
+    implies
+      HasOperands_Register_role_register->size() = 2
+
+--context ALU
+--  inv i1: not (zeroFlag.oclIsUndefined())
+
+context CPU
+  inv PC_in_Range:
+       HasProgramCounter_ProgramCounter_role_programcounter
+      .pc
+    < HasMemory_Memory.entries
+  inv Has_PC_Register:
+    HasRegister_Register
+    ->one( r |
+        r.type = 1 -- RegisterType::pc
+    )
+  inv PC_sync_Register_value:
+     HasRegister_Register
+    ->one( r |
+            r.type = 1 -- RegisterType::pc
+        and r.value = HasProgramCounter_ProgramCounter_role_programcounter.pc
+    )
+
+
+--context Register
+--  inv defined:
+--        (not (type.oclIsUndefined()))
+--    and (not (value.oclIsUndefined()))
+
+--context ALU inv OperationAsInt : self.operation < 4
+--context ControlUnit inv OperationAsInt : self.operation < 4
+--context Register inv RegisterTypeAsInt : self.type < 4
+
+endpackage

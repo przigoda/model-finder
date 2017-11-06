@@ -1,0 +1,20 @@
+import Project : 'Project.ecore#/'
+
+package Project
+
+-- context Employee
+-- constraint f.: FIXME: Employee.allInstances
+--    Employee.allInstances->forAll(e1, e2 | 
+--      e1.project->size > e2.project->size 
+--        implies e1.salary > e2.salary)
+
+context Department
+  inv e: WorksIn_Employee->size() > Controls_Project->size()
+
+context Project 
+  inv g: budget <= Controls_Department.budget
+  -- "Project workers must work in a department which controls the
+  -- project." (h)
+  inv: Controls_Department.WorksIn_Employee->includesAll( WorksOn_Employee )
+
+endpackage

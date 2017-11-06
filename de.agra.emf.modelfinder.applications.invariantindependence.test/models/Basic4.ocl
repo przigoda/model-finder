@@ -1,0 +1,18 @@
+import Basic4 : 'Basic4.ecore#/'
+
+package Basic4
+
+context C
+  inv i0: a and (a implies b) and (b implies c)
+  inv i1: b and (b implies c) and (c implies d)
+  inv i2: c and (c implies d) and (d implies a)
+  inv i3: d and (d implies a) and (a implies b)
+
+  inv j4: a and (a implies b)
+  inv j5: b and (b implies c)
+  inv j6: c and (c implies d)
+  inv j7: d and (d implies a)
+
+  inv k8: a and b and c and d
+
+endpackage

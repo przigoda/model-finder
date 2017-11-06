@@ -1,0 +1,68 @@
+@namespace(uri="CarRental2", prefix="CarRental2")
+package CarRental2;
+
+abstract class Person {
+  op String fullname(String prefix);
+  !ordered attr String firstname;
+  !ordered attr String lastname;
+  !ordered attr int age;
+  !ordered attr boolean isMarried;
+  !ordered attr String email;
+}
+
+class Customer extends Person {
+  !ordered attr String address;
+  ref Rental[*]#Booking_customer Booking_rental;
+}
+
+class Employee extends Person {
+  op int raiseSalary(int amount);
+  !ordered attr int salary;
+  ref Branch#management_manager management_managedBranch;
+  ref Branch[1]#Employment_employee Employment_employer;
+}
+
+class Branch {
+  op Rental rentalsForDate(String day);
+  !ordered attr String location;
+  ref Employee[1]#management_managedBranch management_manager;
+  ref Employee[*]#Employment_employer Employment_employee;
+  ref Car[1]#Fleet_branch Fleet_car;
+  ref CarGroup[*]#Offers_branch Offers_carGroup;
+  ref Rental[*]#Provider_branch Provider_rental;
+}
+
+class Rental {
+  !ordered attr String fromDate;
+  !ordered attr String untilDate;
+  ref Customer[1]#Booking_rental Booking_customer;
+  ref Branch[*]#Provider_rental Provider_branch;
+  ref CarGroup[*]#Reservation_rental Reservation_carGroup;
+  ref Car#Assignment_rental Assignment_car;
+}
+
+class CarGroup {
+  !ordered attr String kind;
+  ref Branch[*]#Offers_carGroup Offers_branch;
+  ref Car[*]#Classification_carGroup Classification_car;
+  ref Rental[*]#Reservation_carGroup Reservation_rental;
+  ref CarGroup#Quality_higher Quality_lower;
+  ref CarGroup#Quality_lower Quality_higher;
+}
+
+class Car {
+  op String description();
+  !ordered attr String id_;
+  ref Branch[1]#Fleet_car Fleet_branch;
+  ref CarGroup[*]#Classification_car Classification_carGroup;
+  ref Rental#Assignment_car Assignment_rental;
+}
+
+class ServiceDepot {
+  !ordered attr String location;
+}
+
+class Check {
+  !ordered attr String description;
+}
+

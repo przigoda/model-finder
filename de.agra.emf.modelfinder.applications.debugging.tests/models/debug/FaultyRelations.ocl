@@ -1,0 +1,7 @@
+import FaultyRelations : 'FaultyRelations.ecore#/'
+
+package FaultyRelations
+
+context A inv i1: true
+
+endpackage

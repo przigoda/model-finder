@@ -1,0 +1,68 @@
+model AccessControl
+
+class Person
+attributes
+operations
+  pass(b: Building)
+constraints
+  inv i1: place->size()=1
+  inv i2: building->size()>=1
+--  inv i3: building->forall( b | building->isUnique(b))
+  inv i4: building->includes(place)
+end
+
+class Building
+end
+
+association authorization between
+  Person[*] role accessor
+  Building[1..*] role building
+end
+
+association situation between
+  Person[*] role person
+  Building[1] role place
+end
+
+class RPerson
+attributes
+operations
+  pass(b: RBuilding)
+constraints
+  inv i1: rplace->size()=1
+  inv i2: rbuilding->size()>=1
+--  inv i3: rbuilding->forall( b | rbuilding->isUnique(b))
+  inv i4: rbuilding->includes(rplace)
+end
+
+class RBuilding
+constraints
+  inv i5: entry->exludes(self)
+end
+
+association rauthorization between
+  RPerson[*] role raccessor
+  RBuilding[1..*] role rbuilding
+end
+
+association rsituation between
+  RPerson[*] role rperson
+  RBuilding[1] role rplace
+end
+
+association communication between
+  RBuilding[1] role exit
+  RBuilding[*] role entry
+end
+
+constraints
+
+context Person::pass(b:Building)
+  pre: building->includes(b)
+  pre: place<>b
+  post: place=b
+  
+context RPerson::pass(b:RBuilding)
+  pre: rbuilding->includes(b)
+  pre: rplace.entry->includes(b)
+  post: rplace=b

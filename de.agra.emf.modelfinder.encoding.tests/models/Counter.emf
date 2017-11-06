@@ -1,0 +1,9 @@
+@namespace(uri="Counter", prefix="Counter")
+package Counter;
+
+class Counter {
+  op void count();
+  op void count2();
+  op void count3();
+  attr int value;
+}

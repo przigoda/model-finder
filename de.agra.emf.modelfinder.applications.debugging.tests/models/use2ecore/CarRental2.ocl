@@ -1,0 +1,7 @@
+import CarRental2 : 'CarRental2.ecore#/'
+
+package CarRental2
+
+--...
+
+endpackage

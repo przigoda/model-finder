@@ -1,0 +1,44 @@
+model Traffic
+
+class Button
+attributes
+operations
+  requesting()
+end
+
+class TrafficLight
+attributes
+  pedLight: Boolean
+  carLight: Boolean
+  request: Boolean
+operations
+  switchPedLight()
+  switchCarLight()
+constraints
+  inv validValues: pedLight.isDefined() and carLight.isDefined() and request.isDefined()
+  inv oneAlwaysRed: not(pedLight = true and carLight = true)
+end
+
+association HasButton between
+  TrafficLight[1] role light
+  Button[1] role button
+end
+
+constraints
+
+context Button::requesting()
+  pre: light.pedLight = false
+  post: light.request = true
+  post: light.carLight = light.carLight@pre
+  post: light.pedLight = light.pedLight@pre
+
+context TrafficLight::switchPedLight()
+  pre: request = true
+  post: pedLight <> pedLight@pre
+  post: request = false
+  post: carLight = carLight@pre
+
+context TrafficLight::switchCarLight()
+  post: carLight <> carLight@pre
+  post: pedLight = pedLight@pre
+  post: request = request@pre

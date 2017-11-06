@@ -1,0 +1,11 @@
+import Basic2 : 'Basic2.ecore#/'
+
+package Basic2
+
+context C
+  inv a25: 3 <= a and a <= 4
+  inv b78: 6 <= b and b <= 9
+  inv c01: 0 <= c and c <= 1
+  inv a34_b69: 3 <= a and a <= 4 and 6 <= b and b <= 9 and 0 <= c and c <= 1
+
+endpackage

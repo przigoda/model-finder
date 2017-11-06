@@ -1,0 +1,47 @@
+@namespace(uri="Train", prefix="Train")
+package Train;
+
+class Train {
+  !ordered ref Waggon[+]#TrainBuildup_Train TrainBuildup_Waggon;
+  !ordered ref Journey[*]#Assignment_Train Assignment_Journey;
+}
+
+class Waggon {
+  !ordered op Waggon[*] predecessorAsSet();
+  !ordered op Waggon[*] privateTransPredecessor(!ordered Waggon[*] s);
+  !ordered op Waggon[*] transPredecessor();
+  !ordered attr int[1] numberOfSeats;
+  !ordered ref Train[1]#TrainBuildup_Waggon TrainBuildup_Train;
+  !ordered ref Waggon#WaggonOrder_Waggon_role_predecessor WaggonOrder_Waggon_role_successor;
+  !ordered ref Waggon#WaggonOrder_Waggon_role_successor WaggonOrder_Waggon_role_predecessor;
+  !ordered ref Reservation[*]#ResWaggon_Waggon ResWaggon_Reservation;
+}
+
+class Journey {
+  !ordered ref Train[1]#Assignment_Journey Assignment_Train;
+  !ordered ref Way[1]#JourneyWay_Journey JourneyWay_Way;
+  !ordered ref Reservation[*]#ResJourney_Journey ResJourney_Reservation;
+}
+
+class Station {
+  op int[1] indexIn(Station[*] oSet);
+  !ordered attr String[1] name;
+  !ordered ref Way[*]#Stops_Station Stops_Way;
+  !ordered ref Reservation[*]#RFrom_Station_role_fromStation RFrom_Reservation_role_resFrom;
+  !ordered ref Reservation[*]#Rto_Station_role_to Rto_Reservation_role_resTo;
+}
+
+class Way {
+  op boolean[1] overlaps(Station[1] a1, Station[1] a2, Station[1] b1, Station[1] b2);
+  !ordered ref Journey[*]#JourneyWay_Way JourneyWay_Journey;
+  ref Station[2..*]#Stops_Way Stops_Station;
+}
+
+class Reservation {
+  !ordered ref Station[1]#RFrom_Reservation_role_resFrom RFrom_Station_role_fromStation;
+  !ordered ref Station[1]#Rto_Reservation_role_resTo Rto_Station_role_to;
+  !ordered ref Journey[1]#ResJourney_Reservation ResJourney_Journey;
+  !ordered ref Waggon[1]#ResWaggon_Reservation ResWaggon_Waggon;
+  !ordered attr int[1] seatNumber;
+}
+

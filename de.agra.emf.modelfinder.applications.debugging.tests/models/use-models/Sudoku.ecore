@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Sudoku" nsURI="Sudoku" nsPrefix="Sudoku">
+  <eClassifiers xsi:type="ecore:EClass" name="Board">
+    <eOperations name="getField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardRows_Row_role_rows" lowerBound="9" upperBound="9" eType="//Row" eOpposite="//Row/BoardRows_Board"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardColumns_Column_role_columns" lowerBound="9" upperBound="9" eType="//Column" eOpposite="//Column/BoardColumns_Board"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardSquares_Square_role_squares" lowerBound="9" upperBound="9" eType="//Square" eOpposite="//Square/BoardSquares_Board"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardFields_Field_role_fields" lowerBound="81" upperBound="81" eType="//Field" eOpposite="//Field/BoardFields_Board"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Row">
+    <eOperations name="getValues"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardRows_Board" lowerBound="1" eType="//Board" eOpposite="//Board/BoardRows_Row_role_rows"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RowFields_Field_role_fields" lowerBound="9" upperBound="9" eType="//Field" eOpposite="//Field/RowFields_Row"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Column">
+    <eOperations name="getValues"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardColumns_Board" lowerBound="1" eType="//Board" eOpposite="//Board/BoardColumns_Column_role_columns"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ColumnFields_Field_role_fields" lowerBound="9" upperBound="9" eType="//Field" eOpposite="//Field/ColumnFields_Column"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Square">
+    <eOperations name="getValues"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardSquares_Board" lowerBound="1" eType="//Board" eOpposite="//Board/BoardSquares_Square_role_squares"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SquareFields_Field_role_fields" lowerBound="9" upperBound="9" eType="//Field" eOpposite="//Field/SquareFields_Square"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="BoardFields_Board" lowerBound="1" eType="//Board" eOpposite="//Board/BoardFields_Field_role_fields"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RowFields_Row" lowerBound="1" eType="//Row" eOpposite="//Row/RowFields_Field_role_fields"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ColumnFields_Column" lowerBound="1" eType="//Column" eOpposite="//Column/ColumnFields_Field_role_fields"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SquareFields_Square" lowerBound="1" eType="//Square" eOpposite="//Square/SquareFields_Field_role_fields"/>
+  </eClassifiers>
+</ecore:EPackage>

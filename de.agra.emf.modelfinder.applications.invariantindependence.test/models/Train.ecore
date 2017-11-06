@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Train" nsURI="Train" nsPrefix="Train">
+  <eClassifiers xsi:type="ecore:EClass" name="Train">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TrainBuildup_Waggon" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Waggon" eOpposite="#//Waggon/TrainBuildup_Train"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Assignment_Journey" ordered="false"
+        upperBound="-1" eType="#//Journey" eOpposite="#//Journey/Assignment_Train"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Waggon">
+    <eOperations name="predecessorAsSet" ordered="false" upperBound="-1" eType="#//Waggon"/>
+    <eOperations name="privateTransPredecessor" ordered="false" upperBound="-1" eType="#//Waggon">
+      <eParameters name="s" ordered="false" upperBound="-1" eType="#//Waggon"/>
+    </eOperations>
+    <eOperations name="transPredecessor" ordered="false" upperBound="-1" eType="#//Waggon"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfSeats" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="TrainBuildup_Train" ordered="false"
+        lowerBound="1" eType="#//Train" eOpposite="#//Train/TrainBuildup_Waggon"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WaggonOrder_Waggon_role_successor"
+        ordered="false" eType="#//Waggon" eOpposite="#//Waggon/WaggonOrder_Waggon_role_predecessor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="WaggonOrder_Waggon_role_predecessor"
+        ordered="false" eType="#//Waggon" eOpposite="#//Waggon/WaggonOrder_Waggon_role_successor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResWaggon_Reservation"
+        ordered="false" upperBound="-1" eType="#//Reservation" eOpposite="#//Reservation/ResWaggon_Waggon"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Journey">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Assignment_Train" ordered="false"
+        lowerBound="1" eType="#//Train" eOpposite="#//Train/Assignment_Journey"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="JourneyWay_Way" ordered="false"
+        lowerBound="1" eType="#//Way" eOpposite="#//Way/JourneyWay_Journey"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResJourney_Reservation"
+        ordered="false" upperBound="-1" eType="#//Reservation" eOpposite="#//Reservation/ResJourney_Journey"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Station">
+    <eOperations name="indexIn" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eParameters name="oSet" upperBound="-1" eType="#//Station"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stops_Way" ordered="false"
+        upperBound="-1" eType="#//Way" eOpposite="#//Way/Stops_Station"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RFrom_Reservation_role_resFrom"
+        ordered="false" upperBound="-1" eType="#//Reservation" eOpposite="#//Reservation/RFrom_Station_role_fromStation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rto_Reservation_role_resTo"
+        ordered="false" upperBound="-1" eType="#//Reservation" eOpposite="#//Reservation/Rto_Station_role_to"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Way">
+    <eOperations name="overlaps" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="a1" lowerBound="1" eType="#//Station"/>
+      <eParameters name="a2" lowerBound="1" eType="#//Station"/>
+      <eParameters name="b1" lowerBound="1" eType="#//Station"/>
+      <eParameters name="b2" lowerBound="1" eType="#//Station"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="JourneyWay_Journey" ordered="false"
+        upperBound="-1" eType="#//Journey" eOpposite="#//Journey/JourneyWay_Way"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Stops_Station" lowerBound="2"
+        upperBound="-1" eType="#//Station" eOpposite="#//Station/Stops_Way"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reservation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RFrom_Station_role_fromStation"
+        ordered="false" lowerBound="1" eType="#//Station" eOpposite="#//Station/RFrom_Reservation_role_resFrom"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Rto_Station_role_to" ordered="false"
+        lowerBound="1" eType="#//Station" eOpposite="#//Station/Rto_Reservation_role_resTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResJourney_Journey" ordered="false"
+        lowerBound="1" eType="#//Journey" eOpposite="#//Journey/ResJourney_Reservation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ResWaggon_Waggon" ordered="false"
+        lowerBound="1" eType="#//Waggon" eOpposite="#//Waggon/ResWaggon_Reservation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seatNumber" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>

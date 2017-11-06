@@ -1,0 +1,91 @@
+import CarRental2 : 'CarRental2.ecore#/'
+
+package CarRental2
+
+
+-- The following three invariants are handling the relations from original ternary assoc
+context TernaryRelationMaintenance
+--  inv relation:
+--    TernaryRelationMaintenance.allInstances()->forAll( t1 |
+--      TernaryRelationMaintenance.allInstances()->forAll( t2 |
+--        ( t1.toServiceDepot = t2.toServiceDepot and
+--          t1.toCheck = t2.toCheck and
+--          t1.toCar = t2.toCar ) implies t1=t2
+--  ))
+  inv relation:
+    TernaryRelationMaintenance.allInstances()->forAll( t1 |
+        ( self.toServiceDepot = t1.toServiceDepot and
+          self.toCheck = t1.toCheck and
+          self.toCar = t1.toCar ) implies self=t1
+  )
+--context Car
+--  inv onlyOneServiceDepotInMaintenance:
+--    self.toMaintenance.toServiceDepot->asSet()->size() <= 1
+--context Check
+--  inv onlyOneServiceDepotInMaintenance:
+--    self.toMaintenance.toServiceDepot->asSet()->size() <= 1
+
+context Person
+  inv Person1: age > 0
+      -- The age attribute of persons is greater than zero
+--  inv Person2: (not firstname.oclIsUndefined()) and (not lastname.oclIsUndefined())
+--       both names must be defined
+  inv Person3: 0 < age and age < 150
+--  inv Person3: age > 200
+      -- the age must be in a reasonable range
+
+--context Person::fullname(prefix : String) : 
+--  post : result = prefix.concat(' ').concat(firstname).concat(' ').concat(lastname)
+
+--context Employee
+  -- each employee is either a manager or a clerk of a branch
+--  employer->isEmpty xor managedBranch->isEmpty
+--  inv Employee1:     Employment_Branch_role_employer->isEmpty()
+--                 xor Management_Branch_role_managedBranch->isEmpty()
+
+context Branch 
+  -- Each manager is also an employee of the same branch
+  inv Branch1: self.Employment_Employee_role_employee
+               ->includes(self.Management_Employee_role_manager)
+  -- Managers get a higher salary than employees
+  inv Branch2: self.Employment_Employee_role_employee
+               ->forAll( e |
+                    (e <> self.Management_Employee_role_manager)
+                    implies (self.Management_Employee_role_manager.salary > e.salary)
+               )
+
+--context CarGroup 
+--  inv CarGroup1: Quality_CarGroup_role_higher<> self and Quality_CarGroup_role_lower<> self
+-- die automatische Koodierung hier is Quatsch 
+      -- The order on CarGroups is not reflexive
+--  inv CarGroup2: Quality_CarGroup_role_higher.Quality_CarGroup_role_higher<> self and Quality_CarGroup_role_lower.Quality_CarGroup_role_lower<> self
+-- die automatische Koodierung hier is Quatsch
+      -- The order on CarGroups is anti-symmetric
+      -- The order on CarGroups is strictly monotonic, i.e. there are no cycles
+
+--context Car
+--  -- A car may not be assigned to a maintenance and to a rental at the same time
+--  inv Car1: Assignment_Rental->isEmpty() or toMaintenance->isEmpty()
+
+  -- A maintenance is done in only one service depot 
+  -- (this cannot be expressed with multiplicities 
+  -- on ternary associations)
+--  inv Car2: serviceDepot->size() <= 1
+
+context Rental
+  -- Only a car of the requested car group or a higher
+  -- (better) one may be assigned to a rental
+--   inv: self.car.isDefined implies 
+--     ( carGroup.car->includes(car) 
+--       or car.carGroup.isBetterThan(carGroup) )
+
+-- A reserved car group must be offered by the 
+-- branch providing the reservation
+  inv Rental2: Provider_Branch.Offers_CarGroup->includes( Reservation_CarGroup )
+
+context Employee::raiseSalary(amount : Integer ) :
+  -- If the amount is positive, raise the salary by the given amount
+  pre:  amount > 0
+  post: salary = salary@pre + amount
+  post: result = salary
+endpackage

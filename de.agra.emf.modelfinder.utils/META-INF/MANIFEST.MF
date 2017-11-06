@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: modelfinder Utils
+Bundle-SymbolicName: de.agra.emf.modelfinder.utils
+Bundle-Version: 0.0.1
+Bundle-Vendor: AGRA
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.xtend.lib,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ de.agra.emf.modelfinder.use2ecore;bundle-version="1.0.0",
+ org.eclipse.emf.ecore;bundle-version="2.9.2",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.9.1",
+ org.eclipse.emf.common.source;bundle-version="2.9.2",
+ org.eclipse.emf.common.ui;bundle-version="2.8.0",
+ org.eclipse.emf.ecore.xmi.source;bundle-version="2.9.1",
+ org.eclipse.ocl.ecore;bundle-version="3.3.0"
+Bundle-ClassPath: .
+Export-Package: de.agra.emf.modelfinder.utils
+
